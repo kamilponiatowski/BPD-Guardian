@@ -12,6 +12,9 @@ import { StateManager } from './modules/stateManager.js';
 import { UIController } from './modules/uiController.js';
 import { ModuleLoader } from './modules/moduleLoader.js';
 import { GamificationSystem } from './modules/gamification.js';
+import { Navigation } from './components/navigation.js';
+import { ProgressTracker } from './components/progressTracker.js';
+import { Quiz } from './components/quiz.js';
 
 // Initialize the application when DOM is fully loaded
 document.addEventListener('DOMContentLoaded', initApp);
@@ -31,28 +34,40 @@ async function initApp() {
     
     // Initialize UI Controller
     const uiController = new UIController(stateManager);
+    stateManager.setUIController(uiController);
     
     // Initialize Module Loader
     const moduleLoader = new ModuleLoader(stateManager);
+    stateManager.setModuleLoader(moduleLoader);
     
     // Initialize Gamification System
     const gamificationSystem = new GamificationSystem(stateManager);
+    
+    // Initialize Navigation
+    const navigation = new Navigation(stateManager);
+    
+    // Initialize Progress Tracker
+    const progressTracker = new ProgressTracker(stateManager);
+    
+    // Initialize Quiz
+    const quiz = new Quiz(stateManager);
     
     // Apply initial translations based on saved language or browser default
     document.documentElement.lang = getCurrentLanguage();
     translate();
     
-    // Set up event listeners
-    setupEventListeners(uiController, moduleLoader, gamificationSystem);
-    
     // Load initial data
     await Promise.all([
       moduleLoader.loadModulesData(),
-      gamificationSystem.loadBadgesData()
+      gamificationSystem.loadBadgesData(),
+      loadCheatsheetData()
     ]);
     
     // Render initial UI
     uiController.renderInitialUI();
+    
+    // Set up event listeners
+    setupEventListeners(uiController, moduleLoader);
     
     // Show appropriate page based on URL hash if present
     handleInitialNavigation(uiController);
@@ -65,13 +80,36 @@ async function initApp() {
 }
 
 /**
+ * Load cheatsheet data from markdown file
+ * 
+ * @returns {Promise} A promise that resolves when cheatsheet is loaded
+ */
+async function loadCheatsheetData() {
+  try {
+    const response = await fetch('bpd_splitting_cheatsheet.md');
+    if (!response.ok) {
+      throw new Error('Failed to load cheatsheet data');
+    }
+    
+    const markdown = await response.text();
+    
+    // Store in state for later use
+    window.stateManager.setState('cheatsheet', markdown);
+    
+    return markdown;
+  } catch (error) {
+    console.error('Error loading cheatsheet data:', error);
+    return null;
+  }
+}
+
+/**
  * Set up all event listeners for the application
  * 
  * @param {UIController} uiController - The UI controller instance
  * @param {ModuleLoader} moduleLoader - The module loader instance
- * @param {GamificationSystem} gamificationSystem - The gamification system instance
  */
-function setupEventListeners(uiController, moduleLoader, gamificationSystem) {
+function setupEventListeners(uiController, moduleLoader) {
   // Navigation
   document.querySelectorAll('.nav__link, .hero__cta').forEach(link => {
     link.addEventListener('click', (e) => {
@@ -99,7 +137,18 @@ function setupEventListeners(uiController, moduleLoader, gamificationSystem) {
       setLanguage(lang);
       document.documentElement.lang = lang;
       translate();
+      
+      // Update active state
+      document.querySelectorAll('.language-switcher__btn').forEach(el => {
+        el.setAttribute('data-active', el.dataset.lang === lang ? 'true' : 'false');
+      });
     });
+  });
+  
+  // Set initial language button state
+  const currentLang = getCurrentLanguage();
+  document.querySelectorAll('.language-switcher__btn').forEach(btn => {
+    btn.setAttribute('data-active', btn.dataset.lang === currentLang ? 'true' : 'false');
   });
   
   // Module clicks
@@ -125,28 +174,6 @@ function setupEventListeners(uiController, moduleLoader, gamificationSystem) {
     moduleLoader.navigateToNextLesson();
   });
   
-  // Quiz navigation buttons
-  document.querySelector('.quiz__prev').addEventListener('click', () => {
-    moduleLoader.navigateToPreviousQuizQuestion();
-  });
-  
-  document.querySelector('.quiz__next').addEventListener('click', () => {
-    moduleLoader.navigateToNextQuizQuestion();
-  });
-  
-  document.querySelector('.quiz__finish').addEventListener('click', () => {
-    moduleLoader.finishQuiz();
-  });
-  
-  // Quiz results buttons
-  document.querySelector('.quiz-results__retry').addEventListener('click', () => {
-    moduleLoader.retryQuiz();
-  });
-  
-  document.querySelector('.quiz-results__continue').addEventListener('click', () => {
-    uiController.showPage('modules');
-  });
-  
   // FAQ accordion
   document.addEventListener('click', (e) => {
     if (e.target.matches('.faq-item__question') || e.target.closest('.faq-item__question')) {
@@ -156,6 +183,16 @@ function setupEventListeners(uiController, moduleLoader, gamificationSystem) {
       
       const isExpanded = question.getAttribute('aria-expanded') === 'true';
       question.setAttribute('aria-expanded', !isExpanded);
+      
+      // Adjust max-height of answer
+      const answer = question.nextElementSibling;
+      if (answer && answer.classList.contains('faq-item__answer')) {
+        if (!isExpanded) {
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        } else {
+          answer.style.maxHeight = '0';
+        }
+      }
     }
   });
   

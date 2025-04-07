@@ -15,11 +15,11 @@ export class UIController {
    */
   constructor(stateManager) {
     this.stateManager = stateManager;
-    
+
     // Set up state change listeners
     this.setupStateListeners();
   }
-  
+
   /**
    * Set up listeners for state changes
    * 
@@ -30,69 +30,70 @@ export class UIController {
     this.stateManager.subscribe('user.points', (newPoints) => {
       this.updatePointsDisplay(newPoints);
     });
-    
+
     // Listen for changes to user badges
     this.stateManager.subscribe('user.badges', (badges) => {
       this.updateBadgesDisplay(badges);
     });
-    
+
     // Listen for changes to completed modules
     this.stateManager.subscribe('user.completedModules', (completedModules) => {
       this.updateCompletedModulesDisplay(completedModules);
     });
-    
+
     // Listen for changes to module progress
     this.stateManager.subscribe('user.moduleProgress', (moduleProgress) => {
       this.updateModuleProgressDisplay(moduleProgress);
     });
-    
+
     // Listen for changes to current page
     this.stateManager.subscribe('currentPage', (newPage) => {
       this.updateActivePage(newPage);
     });
-    
+
     // Listen for changes to the current module
     this.stateManager.subscribe('currentModule', (module) => {
       this.updateModuleDisplay(module);
     });
-    
+
     // Listen for changes to the current lesson
     this.stateManager.subscribe('currentLesson', (lesson) => {
       this.updateLessonDisplay(lesson);
     });
-    
+
     // Listen for changes to notifications
     this.stateManager.subscribe('notifications', (notifications) => {
       this.updateNotifications(notifications);
     });
   }
-  
+
   /**
    * Render the initial UI based on current state
    */
   renderInitialUI() {
+    this.renderFAQ();
     // Update points display
     this.updatePointsDisplay(this.stateManager.getState('user.points'));
-    
+
     // Update badges display
     this.updateBadgesDisplay(this.stateManager.getState('user.badges'));
-    
+
     // Update completed modules display
     this.updateCompletedModulesDisplay(this.stateManager.getState('user.completedModules'));
-    
+
     // Update module progress display
     this.updateModuleProgressDisplay(this.stateManager.getState('user.moduleProgress'));
-    
+
     // Render modules grid
     this.renderModulesGrid(this.stateManager.getState('modules'));
-    
+
     // Render badges collection
     this.renderBadgesCollection();
-    
+
     // Render modules progress in progress page
     this.renderModulesProgress();
   }
-  
+
   /**
    * Show a specific page and update state
    * 
@@ -103,15 +104,15 @@ export class UIController {
       console.error(`Page with ID "${pageId}" not found`);
       return;
     }
-    
+
     // Hide all pages
     document.querySelectorAll('.page').forEach(page => {
       page.classList.remove('page--active');
     });
-    
+
     // Show selected page
     document.getElementById(pageId).classList.add('page--active');
-    
+
     // Update active nav link
     document.querySelectorAll('.nav__link').forEach(link => {
       if (link.dataset.page === pageId) {
@@ -120,18 +121,18 @@ export class UIController {
         link.classList.remove('nav__link--active');
       }
     });
-    
+
     // Close mobile menu if open
     const menuToggle = document.querySelector('.nav__toggle');
     if (menuToggle && menuToggle.getAttribute('aria-expanded') === 'true') {
       menuToggle.setAttribute('aria-expanded', 'false');
       document.querySelector('.nav__menu').classList.remove('nav__menu--open');
     }
-    
+
     // Update state
     this.stateManager.setState('currentPage', pageId);
   }
-  
+
   /**
    * Update the active page based on state
    * 
@@ -144,7 +145,7 @@ export class UIController {
       this.showPage(pageId);
     }
   }
-  
+
   /**
    * Update points display
    * 
@@ -158,14 +159,14 @@ export class UIController {
       pointsDisplay.textContent = t('user.points', { pointsValue: points || 0 });
       pointsDisplay.dataset.pointsValue = points || 0;
     }
-    
+
     // Update progress page points display
     const earnedPointsDisplay = document.getElementById('earned-points');
     if (earnedPointsDisplay) {
       earnedPointsDisplay.textContent = points || 0;
     }
   }
-  
+
   /**
    * Update badges display
    * 
@@ -177,12 +178,12 @@ export class UIController {
     const badgesContainer = document.querySelector('.user-progress__badges');
     if (badgesContainer) {
       badgesContainer.innerHTML = '';
-      
+
       // Show up to 3 badges in header
-      const displayBadges = badges && badges.length > 0 
-        ? badges.slice(0, 3) 
+      const displayBadges = badges && badges.length > 0
+        ? badges.slice(0, 3)
         : [];
-      
+
       displayBadges.forEach(badge => {
         const badgeElement = document.createElement('div');
         badgeElement.className = 'user-progress__badge';
@@ -190,7 +191,7 @@ export class UIController {
         badgeElement.textContent = badge.icon || '🏆';
         badgesContainer.appendChild(badgeElement);
       });
-      
+
       // Add "more" indicator if there are more badges
       if (badges && badges.length > 3) {
         const moreElement = document.createElement('div');
@@ -199,17 +200,17 @@ export class UIController {
         badgesContainer.appendChild(moreElement);
       }
     }
-    
+
     // Update progress page badges count
     const earnedBadgesDisplay = document.getElementById('earned-badges');
     if (earnedBadgesDisplay) {
       earnedBadgesDisplay.textContent = badges ? badges.length : 0;
     }
-    
+
     // Update badges collection on progress page
     this.renderBadgesCollection();
   }
-  
+
   /**
    * Update completed modules display
    * 
@@ -222,11 +223,11 @@ export class UIController {
     if (completedModulesDisplay) {
       completedModulesDisplay.textContent = completedModules ? completedModules.length : 0;
     }
-    
+
     // Update modules grid to reflect completion status
     this.renderModulesGrid(this.stateManager.getState('modules'));
   }
-  
+
   /**
    * Update module progress display
    * 
@@ -235,7 +236,7 @@ export class UIController {
    */
   updateModuleProgressDisplay(moduleProgress) {
     if (!moduleProgress) return;
-    
+
     // Update progress bars in modules grid
     Object.entries(moduleProgress).forEach(([moduleId, data]) => {
       const moduleCard = document.querySelector(`.module-card[data-module-id="${moduleId}"]`);
@@ -244,7 +245,7 @@ export class UIController {
         if (progressBar) {
           progressBar.style.width = `${data.progress || 0}%`;
         }
-        
+
         // If module is completed, add completed class
         if (data.completed) {
           moduleCard.classList.add('module-card--completed');
@@ -253,7 +254,7 @@ export class UIController {
         }
       }
     });
-    
+
     // Update module progress on module content page
     const currentModuleId = this.stateManager.getState('currentModule.id');
     if (currentModuleId && moduleProgress[currentModuleId]) {
@@ -262,11 +263,11 @@ export class UIController {
         moduleNavProgress.style.width = `${moduleProgress[currentModuleId].progress || 0}%`;
       }
     }
-    
+
     // Update modules progress on progress page
     this.renderModulesProgress();
   }
-  
+
   /**
    * Render the modules grid
    * 
@@ -274,89 +275,89 @@ export class UIController {
    */
   renderModulesGrid(modules) {
     if (!modules || modules.length === 0) return;
-    
+
     const container = document.getElementById('modules-container');
     if (!container) return;
-    
+
     // Clear container
     container.innerHTML = '';
-    
+
     // Get user progress data
     const completedModules = this.stateManager.getState('user.completedModules') || [];
     const moduleProgress = this.stateManager.getState('user.moduleProgress') || {};
-    
+
     // Render each module
     modules.forEach((module, index) => {
       const isCompleted = completedModules.includes(module.id);
       const progress = moduleProgress[module.id] ? moduleProgress[module.id].progress || 0 : 0;
-      
+
       const moduleCard = document.createElement('div');
       moduleCard.className = `module-card ${isCompleted ? 'module-card--completed' : ''}`;
       moduleCard.dataset.moduleId = module.id;
-      
+
       // Module header with number and progress
       const moduleHeader = document.createElement('div');
       moduleHeader.className = 'module-card__header';
-      
+
       const moduleNumber = document.createElement('span');
       moduleNumber.className = 'module-card__number';
       moduleNumber.textContent = `${t('modules.module')} ${index + 1}`;
-      
+
       const moduleProgressContainer = document.createElement('div');
       moduleProgressContainer.className = 'module-card__progress';
       moduleProgressContainer.setAttribute('aria-label', `${t('modules.progress')}: ${progress}%`);
-      
+
       const moduleProgressBar = document.createElement('div');
       moduleProgressBar.className = 'module-card__progress-bar';
       moduleProgressBar.style.width = `${progress}%`;
-      
+
       moduleProgressContainer.appendChild(moduleProgressBar);
       moduleHeader.appendChild(moduleNumber);
       moduleHeader.appendChild(moduleProgressContainer);
-      
+
       // Module title and description
       const moduleTitle = document.createElement('h2');
       moduleTitle.className = 'module-card__title';
       moduleTitle.textContent = module.title;
-      
+
       const moduleDesc = document.createElement('p');
       moduleDesc.className = 'module-card__desc';
       moduleDesc.textContent = module.description;
-      
+
       // Module lessons list
       const moduleLessons = document.createElement('ul');
       moduleLessons.className = 'module-card__lessons';
-      
+
       module.lessons.forEach(lesson => {
         const lessonItem = document.createElement('li');
         lessonItem.className = 'module-card__lesson';
         lessonItem.textContent = lesson.title;
         moduleLessons.appendChild(lessonItem);
       });
-      
+
       // Module CTA button
       const moduleCta = document.createElement('button');
       moduleCta.className = 'btn module-card__cta';
       moduleCta.dataset.module = module.id;
-      moduleCta.textContent = isCompleted 
-        ? t('modules.reviewBtn') 
+      moduleCta.textContent = isCompleted
+        ? t('modules.reviewBtn')
         : t('modules.startBtn');
-      
+
       // Module badges
       const moduleBadges = document.createElement('div');
       moduleBadges.className = 'module-card__badges';
-      
+
       // Completion badge
       const completionBadge = document.createElement('div');
       completionBadge.className = `badge ${isCompleted ? '' : 'badge--locked'}`;
       completionBadge.dataset.badge = `${module.id}-complete`;
-      completionBadge.setAttribute('aria-label', isCompleted 
-        ? t('modules.completedBadge') 
+      completionBadge.setAttribute('aria-label', isCompleted
+        ? t('modules.completedBadge')
         : t('modules.lockedBadge'));
       completionBadge.textContent = isCompleted ? '✅' : '🔒';
-      
+
       moduleBadges.appendChild(completionBadge);
-      
+
       // Add all elements to card
       moduleCard.appendChild(moduleHeader);
       moduleCard.appendChild(moduleTitle);
@@ -364,7 +365,7 @@ export class UIController {
       moduleCard.appendChild(moduleLessons);
       moduleCard.appendChild(moduleCta);
       moduleCard.appendChild(moduleBadges);
-      
+
       // Add event listener to button
       moduleCta.addEventListener('click', () => {
         const moduleLoader = this.stateManager.getModuleLoader();
@@ -373,12 +374,12 @@ export class UIController {
           this.showPage('module-content');
         }
       });
-      
+
       // Add card to container
       container.appendChild(moduleCard);
     });
   }
-  
+
   /**
    * Render badges collection
    * 
@@ -387,41 +388,41 @@ export class UIController {
   renderBadgesCollection() {
     const container = document.getElementById('badges-container');
     if (!container) return;
-    
+
     // Clear container
     container.innerHTML = '';
-    
+
     // Get badges data
     const userBadges = this.stateManager.getState('user.badges') || [];
     const allBadges = this.stateManager.getState('badges') || [];
-    
+
     // Create a map of user badges for quick lookup
     const userBadgesMap = {};
     userBadges.forEach(badge => {
       userBadgesMap[badge.id] = badge;
     });
-    
+
     // Render each badge
     allBadges.forEach(badge => {
       const isUnlocked = userBadgesMap[badge.id] !== undefined;
-      
+
       const badgeElement = document.createElement('div');
       badgeElement.className = `badge ${isUnlocked ? '' : 'badge--locked'}`;
       badgeElement.dataset.badgeId = badge.id;
       badgeElement.setAttribute('title', isUnlocked ? badge.name : t('badges.locked'));
-      badgeElement.setAttribute('aria-label', isUnlocked 
-        ? badge.name 
+      badgeElement.setAttribute('aria-label', isUnlocked
+        ? badge.name
         : t('badges.lockedBadge', { name: badge.name }));
-      
+
       badgeElement.textContent = isUnlocked ? (badge.icon || '🏆') : '🔒';
-      
+
       // Add tooltip with badge details (using title attribute or custom tooltip)
-      
+
       // Add to container
       container.appendChild(badgeElement);
     });
   }
-  
+
   /**
    * Render modules progress in progress page
    * 
@@ -430,54 +431,54 @@ export class UIController {
   renderModulesProgress() {
     const container = document.getElementById('modules-progress-container');
     if (!container) return;
-    
+
     // Clear container
     container.innerHTML = '';
-    
+
     // Get modules and progress data
     const modules = this.stateManager.getState('modules') || [];
     const moduleProgress = this.stateManager.getState('user.moduleProgress') || {};
-    
+
     // Render each module's progress
     modules.forEach((module, index) => {
-      const progress = moduleProgress[module.id] 
-        ? moduleProgress[module.id].progress || 0 
+      const progress = moduleProgress[module.id]
+        ? moduleProgress[module.id].progress || 0
         : 0;
-      
+
       const moduleElement = document.createElement('div');
       moduleElement.className = 'module-progress-item';
-      
+
       const moduleInfo = document.createElement('div');
       moduleInfo.className = 'module-progress-item__info';
-      
+
       const moduleTitle = document.createElement('h3');
       moduleTitle.className = 'module-progress-item__title';
       moduleTitle.textContent = `${index + 1}. ${module.title}`;
-      
+
       const moduleProgressText = document.createElement('div');
       moduleProgressText.className = 'module-progress-item__percentage';
       moduleProgressText.textContent = `${progress}%`;
-      
+
       moduleInfo.appendChild(moduleTitle);
       moduleInfo.appendChild(moduleProgressText);
-      
+
       const moduleProgressContainer = document.createElement('div');
       moduleProgressContainer.className = 'module-progress-item__progress';
       moduleProgressContainer.setAttribute('aria-label', `${t('modules.progress')}: ${progress}%`);
-      
+
       const moduleProgressBar = document.createElement('div');
       moduleProgressBar.className = 'module-progress-item__progress-bar';
       moduleProgressBar.style.width = `${progress}%`;
-      
+
       moduleProgressContainer.appendChild(moduleProgressBar);
-      
+
       moduleElement.appendChild(moduleInfo);
       moduleElement.appendChild(moduleProgressContainer);
-      
+
       container.appendChild(moduleElement);
     });
   }
-  
+
   /**
    * Update the module display in the module content page
    * 
@@ -486,7 +487,7 @@ export class UIController {
    */
   updateModuleDisplay(module) {
     if (!module) return;
-    
+
     // Update module progress bar
     const progress = this.stateManager.getState(`user.moduleProgress.${module.id}.progress`) || 0;
     const moduleNavProgress = document.querySelector('.module-nav__progress-bar');
@@ -494,7 +495,7 @@ export class UIController {
       moduleNavProgress.style.width = `${progress}%`;
     }
   }
-  
+
   /**
    * Update the lesson display in the module content page
    * 
@@ -503,21 +504,21 @@ export class UIController {
    */
   updateLessonDisplay(lesson) {
     if (!lesson) return;
-    
+
     const container = document.getElementById('module-content-container');
     if (!container) return;
-    
+
     // Clear container
     container.innerHTML = '';
-    
+
     // Create lesson content elements
     const lessonTitle = document.createElement('h1');
     lessonTitle.className = 'lesson__title';
     lessonTitle.textContent = lesson.title;
-    
+
     const lessonContent = document.createElement('div');
     lessonContent.className = 'lesson__content';
-    
+
     // Handle different content types
     if (typeof lesson.content === 'string') {
       // Simple string content
@@ -529,19 +530,19 @@ export class UIController {
         lessonContent.appendChild(blockElement);
       });
     }
-    
+
     // Add to container
     container.appendChild(lessonTitle);
     container.appendChild(lessonContent);
-    
+
     // Update navigation buttons
     const prevButton = document.querySelector('.module-navigation__prev');
     const nextButton = document.querySelector('.module-navigation__next');
-    
+
     if (prevButton) {
       prevButton.disabled = !lesson.hasPrevious;
     }
-    
+
     if (nextButton) {
       if (lesson.isLastLesson) {
         nextButton.textContent = t('module.toQuiz');
@@ -550,7 +551,7 @@ export class UIController {
       }
     }
   }
-  
+
   /**
    * Create a content block element based on block type
    * 
@@ -561,109 +562,109 @@ export class UIController {
   createContentBlock(block) {
     const blockElement = document.createElement('div');
     blockElement.className = `content-block content-block--${block.type}`;
-    
+
     switch (block.type) {
       case 'text':
         blockElement.innerHTML = block.content;
         break;
-        
+
       case 'image':
         const img = document.createElement('img');
         img.src = block.src;
         img.alt = block.alt || '';
-        
+
         if (block.caption) {
           const figure = document.createElement('figure');
           figure.appendChild(img);
-          
+
           const figcaption = document.createElement('figcaption');
           figcaption.textContent = block.caption;
-          
+
           figure.appendChild(figcaption);
           blockElement.appendChild(figure);
         } else {
           blockElement.appendChild(img);
         }
         break;
-        
+
       case 'tip':
         const tipIcon = document.createElement('div');
         tipIcon.className = 'tip__icon';
         tipIcon.textContent = block.icon || '💡';
-        
+
         const tipContent = document.createElement('div');
         tipContent.className = 'tip__content';
         tipContent.innerHTML = block.content;
-        
+
         blockElement.appendChild(tipIcon);
         blockElement.appendChild(tipContent);
         break;
-        
+
       case 'example':
         const exampleTitle = document.createElement('h3');
         exampleTitle.className = 'example__title';
         exampleTitle.textContent = block.title || t('module.example');
-        
+
         const exampleContent = document.createElement('div');
         exampleContent.className = 'example__content';
         exampleContent.innerHTML = block.content;
-        
+
         blockElement.appendChild(exampleTitle);
         blockElement.appendChild(exampleContent);
         break;
-        
+
       case 'table':
         const table = document.createElement('table');
-        
+
         // Add caption if provided
         if (block.caption) {
           const caption = document.createElement('caption');
           caption.textContent = block.caption;
           table.appendChild(caption);
         }
-        
+
         // Add header if provided
         if (block.header) {
           const thead = document.createElement('thead');
           const headerRow = document.createElement('tr');
-          
+
           block.header.forEach(cell => {
             const th = document.createElement('th');
             th.innerHTML = cell;
             headerRow.appendChild(th);
           });
-          
+
           thead.appendChild(headerRow);
           table.appendChild(thead);
         }
-        
+
         // Add body
         const tbody = document.createElement('tbody');
-        
+
         block.rows.forEach(row => {
           const tr = document.createElement('tr');
-          
+
           row.forEach(cell => {
             const td = document.createElement('td');
             td.innerHTML = cell;
             tr.appendChild(td);
           });
-          
+
           tbody.appendChild(tr);
         });
-        
+
         table.appendChild(tbody);
         blockElement.appendChild(table);
         break;
-        
+
       default:
         // Unknown block type, render as plain text
         blockElement.textContent = JSON.stringify(block);
     }
-    
+
     return blockElement;
   }
-  
+
   /**
    * Update notifications display
    * 
@@ -672,37 +673,37 @@ export class UIController {
    */
   updateNotifications(notifications) {
     if (!notifications || notifications.length === 0) return;
-    
+
     // Get the most recent notification
     const latestNotification = notifications[notifications.length - 1];
-    
+
     const notificationElement = document.getElementById('notification');
     const messageElement = notificationElement.querySelector('.notification__message');
     const iconElement = notificationElement.querySelector('.notification__icon');
-    
+
     // Update notification content
     messageElement.textContent = latestNotification.message;
     iconElement.textContent = latestNotification.icon || '📢';
-    
+
     // Add appropriate class based on notification type
     notificationElement.className = 'notification';
     if (latestNotification.type) {
       notificationElement.classList.add(`notification--${latestNotification.type}`);
     }
-    
+
     // Show notification
     notificationElement.setAttribute('aria-hidden', 'false');
-    
+
     // Hide notification after 5 seconds
     setTimeout(() => {
       notificationElement.setAttribute('aria-hidden', 'true');
-      
+
       // Remove notification from state after it's hidden
       setTimeout(() => {
         // Only remove if it's still the same notification
         const currentNotifications = this.stateManager.getState('notifications') || [];
-        if (currentNotifications.length > 0 && 
-            currentNotifications[currentNotifications.length - 1].id === latestNotification.id) {
+        if (currentNotifications.length > 0 &&
+          currentNotifications[currentNotifications.length - 1].id === latestNotification.id) {
           this.stateManager.setState(
             'notifications',
             currentNotifications.filter(n => n.id !== latestNotification.id)
@@ -711,7 +712,7 @@ export class UIController {
       }, 300); // Wait for fade-out animation
     }, 5000);
   }
-  
+
   /**
    * Show achievement modal
    * 
@@ -725,15 +726,143 @@ export class UIController {
     const descriptionElement = modal.querySelector('.achievement__description');
     const pointsElement = modal.querySelector('.achievement__points');
     const iconElement = modal.querySelector('.achievement__icon');
-    
+
     // Update modal content
     titleElement.textContent = t('achievement.earned');
     nameElement.textContent = badge.name;
     descriptionElement.textContent = badge.description;
     pointsElement.textContent = t('achievement.points', { points });
     iconElement.textContent = badge.icon || '🏆';
-    
+
     // Show modal
     modal.setAttribute('aria-hidden', 'false');
+  }
+
+  // Dodaj tą metodę do klasy UIController w pliku js/modules/uiController.js
+
+  /**
+   * Render FAQ with additional cheatsheet data
+   */
+  renderFAQ() {
+    const container = document.getElementById('faq-container');
+    if (!container) return;
+
+    // Clear container but keep the existing FAQ items
+    const existingFAQ = Array.from(container.querySelectorAll('.faq-item'));
+
+    // Add cheatsheet data if available
+    const cheatsheet = this.stateManager.getState('cheatsheet');
+    if (cheatsheet) {
+      // Create cheatsheet section
+      const cheatsheetSection = document.createElement('div');
+      cheatsheetSection.className = 'faq-section';
+
+      const sectionTitle = document.createElement('h2');
+      sectionTitle.className = 'faq-section__title';
+      sectionTitle.textContent = 'BPD Splitting Cheatsheet';
+      cheatsheetSection.appendChild(sectionTitle);
+
+      // Parse markdown sections
+      const sections = cheatsheet.split('---');
+      sections.forEach(section => {
+        if (!section.trim()) return;
+
+        // Extract title from section
+        const titleMatch = section.match(/##\s(.+)/);
+        if (!titleMatch) return;
+
+        const title = titleMatch[1];
+
+        // Create FAQ item
+        const faqItem = document.createElement('div');
+        faqItem.className = 'faq-item';
+
+        const question = document.createElement('button');
+        question.className = 'faq-item__question';
+        question.setAttribute('aria-expanded', 'false');
+
+        const questionText = document.createElement('span');
+        questionText.textContent = title;
+
+        const icon = document.createElement('span');
+        icon.className = 'faq-item__icon';
+        icon.setAttribute('aria-hidden', 'true');
+        icon.textContent = '+';
+
+        question.appendChild(questionText);
+        question.appendChild(icon);
+
+        const answer = document.createElement('div');
+        answer.className = 'faq-item__answer';
+
+        // Process content - replace markdown with HTML
+        let content = section.replace(/##\s.+\n/, '').trim();
+
+        // Convert tables
+        if (content.includes('|')) {
+          const tableRegex = /\|(.+)\|\n\|[-|]+\|\n((?:\|.+\|\n)+)/g;
+          content = content.replace(tableRegex, (match, header, rows) => {
+            const headerCells = header.split('|').map(cell => cell.trim()).filter(Boolean);
+            const tableRows = rows.split('\n').filter(row => row.includes('|'));
+
+            let tableHTML = '<table><thead><tr>';
+            headerCells.forEach(cell => {
+              tableHTML += `<th>${cell}</th>`;
+            });
+            tableHTML += '</tr></thead><tbody>';
+
+            tableRows.forEach(row => {
+              const cells = row.split('|').map(cell => cell.trim()).filter(Boolean);
+              tableHTML += '<tr>';
+              cells.forEach(cell => {
+                tableHTML += `<td>${cell}</td>`;
+              });
+              tableHTML += '</tr>';
+            });
+
+            tableHTML += '</tbody></table>';
+            return tableHTML;
+          });
+        }
+
+        // Convert bold text
+        content = content.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+
+        // Convert lists
+        content = content.replace(/- (.+)/g, '<li>$1</li>');
+        content = content.replace(/(<li>.+<\/li>\n)+/g, '<ul>$&</ul>');
+
+        // Convert paragraphs
+        content = content.replace(/([^\n]+)\n\n/g, '<p>$1</p>');
+
+        answer.innerHTML = content;
+
+        faqItem.appendChild(question);
+        faqItem.appendChild(answer);
+
+        cheatsheetSection.appendChild(faqItem);
+      });
+
+      // Add cheatsheet section to the container
+      container.appendChild(cheatsheetSection);
+    }
+
+    // Initialize accordion functionality for new items
+    document.querySelectorAll('.faq-item__question').forEach(question => {
+      question.addEventListener('click', () => {
+        const isExpanded = question.getAttribute('aria-expanded') === 'true';
+        question.setAttribute('aria-expanded', !isExpanded);
+
+        // Adjust max-height of answer
+        const answer = question.nextElementSibling;
+        if (answer && answer.classList.contains('faq-item__answer')) {
+          if (!isExpanded) {
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+          } else {
+            answer.style.maxHeight = '0';
+          }
+        }
+      });
+    });
   }
 }

@@ -1,22 +1,39 @@
 {
-    "name": "splitting-coach",
-    "version": "1.0.0",
-    "description": "Interaktywna aplikacja edukacyjna do nauki technik radzenia sobie ze splittingiem",
-    "main": "js/app.js",
-    "scripts": {
-      "start": "http-server -p 8080 -c-1",
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [
-      "bpd",
-      "splitting",
-      "psychology",
-      "education",
-      "gamification"
-    ],
-    "author": "Kamil",
-    "license": "MIT",
-    "devDependencies": {
-      "http-server": "^14.1.1"
-    }
+  "author": "ProDucktive",
+  "license": "MIT",
+  "name": "splitting-coach",
+  "version": "1.0.0",
+  "description": "Interaktywna aplikacja edukacyjna do nauki technik radzenia sobie ze splittingiem",
+  "main": "js/app.js",
+  "scripts": {
+    "start": "http-server -p 8080 -c-1",
+    "dev": "concurrently \"npm:watch-*\" \"npm:start\"",
+    "watch-css": "postcss css/**/*.css --watch --dir ./dist/css",
+    "build": "npm run clean && npm run build-css && npm run copy-assets",
+    "build-css": "postcss css/**/*.css --dir ./dist/css",
+    "copy-assets": "copyfiles -u 1 \"assets/**/*\" \"js/**/*\" \"data/**/*\" \"*.md\" \"*.html\" \"lang/**/*\" dist/",
+    "clean": "rimraf dist",
+    "lint": "eslint js/**/*.js",
+    "test": "jest"
+  },
+  "keywords": [
+    "bpd",
+    "splitting",
+    "psychology",
+    "education",
+    "gamification"
+  ],
+  "devDependencies": {
+    "concurrently": "^8.2.1",
+    "copyfiles": "^2.4.1",
+    "eslint": "^8.46.0",
+    "http-server": "^14.1.1",
+    "jest": "^29.6.2",
+    "postcss": "^8.4.27",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0",
+    "postcss-minify": "^1.1.0",
+    "postcss-preset-env": "^9.1.1",
+    "rimraf": "^5.0.1"
   }
+}
