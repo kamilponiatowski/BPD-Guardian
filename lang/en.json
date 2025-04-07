@@ -1,0 +1,159 @@
+{
+    "app": {
+      "name": "Splitting Coach",
+      "title": "Splitting Coach - Learn to deal with splitting",
+      "description": "Interactive application for learning techniques to handle splitting in relationships with people with BPD traits"
+    },
+    "nav": {
+      "home": "Home",
+      "modules": "Modules",
+      "progress": "Your Progress",
+      "faq": "FAQ"
+    },
+    "user": {
+      "points": "Points: {pointsValue}"
+    },
+    "home": {
+      "title": "Learn to deal with splitting",
+      "subtitle": "Interactive application for learning techniques to support relationships with people with BPD traits",
+      "benefit1": {
+        "title": "Understand the mechanism",
+        "desc": "Learn what splitting is and how it affects relationships"
+      },
+      "benefit2": {
+        "title": "Learn techniques",
+        "desc": "Practical communication and emotion management tools"
+      },
+      "benefit3": {
+        "title": "Build healthy relationships",
+        "desc": "Apply learned techniques in everyday situations"
+      },
+      "cta": "Start Learning",
+      "about": {
+        "title": "What is splitting?",
+        "desc1": "Splitting is a defense mechanism in which a person with BPD views people and situations in extremes - as either all good or all bad, with no shades of gray.",
+        "desc2": "During splitting, the sympathetic nervous system may be activated (the \"fight or flight\" response), leading to intense emotional reactions."
+      },
+      "howItWorks": {
+        "title": "How does the app work?",
+        "step1": {
+          "title": "Learn",
+          "desc": "Gain knowledge through interactive modules"
+        },
+        "step2": {
+          "title": "Practice",
+          "desc": "Test your knowledge with quizzes and scenarios"
+        },
+        "step3": {
+          "title": "Apply",
+          "desc": "Use the tools in your relationships"
+        },
+        "step4": {
+          "title": "Grow",
+          "desc": "Earn badges and unlock new content"
+        }
+      }
+    },
+    "modules": {
+      "title": "Educational Modules",
+      "desc": "Choose a module to start learning. It's best to work through the modules in order, from basics to advanced techniques.",
+      "module": "Module",
+      "progress": "Progress",
+      "startBtn": "Start",
+      "reviewBtn": "Review",
+      "completedBadge": "Module completion badge",
+      "lockedBadge": "Module completion badge (locked)",
+      "module1": {
+        "title": "Understanding Splitting",
+        "desc": "Learn about the splitting mechanism and its impact on relationships",
+        "lesson1": "What is splitting?",
+        "lesson2": "How splitting affects relationships?",
+        "lesson3": "Symptoms of splitting",
+        "lesson4": "The vicious cycle of splitting"
+      },
+      "module2": {
+        "title": "Communication Techniques",
+        "desc": "Learn effective communication methods in difficult situations",
+        "lesson1": "Basics of communication with someone experiencing splitting",
+        "lesson2": "SET Technique",
+        "lesson3": "Communication Sandwich"
+      }
+    },
+    "module": {
+      "back": "Back",
+      "next": "Next lesson",
+      "prev": "Previous lesson",
+      "toQuiz": "Go to quiz",
+      "example": "Example"
+    },
+    "quiz": {
+      "title": "Quiz: Test Your Knowledge",
+      "next": "Next question",
+      "prev": "Previous question",
+      "finish": "Finish quiz",
+      "noAnswerSelected": "Select an answer to continue",
+      "results": {
+        "title": "Your result",
+        "correct": "Correct answers: {correctAnswers} out of {totalQuestions}",
+        "excellent": "Congratulations! Excellent result! You've mastered the material from this module.",
+        "good": "Good job! You understand most of the material. You can still improve in some areas.",
+        "needsImprovement": "It's worth reviewing the material from this module to better understand the concepts.",
+        "retry": "Try again",
+        "continue": "Continue learning"
+      }
+    },
+    "progress": {
+      "title": "Your Progress",
+      "desc": "Track your achievements and earned badges",
+      "completedModules": "Completed modules",
+      "earnedPoints": "Earned points",
+      "earnedBadges": "Earned badges",
+      "badges": {
+        "title": "Your badges"
+      },
+      "modulesProgress": {
+        "title": "Module progress"
+      }
+    },
+    "badges": {
+      "locked": "Badge locked",
+      "lockedBadge": "Badge {name} (locked)"
+    },
+    "achievement": {
+      "earned": "Badge earned!",
+      "points": "+{points} points",
+      "close": "Great!"
+    },
+    "points": {
+      "lessonCompleted": "Lesson completed: {lesson}",
+      "moduleCompleted": "Module completed: {module}",
+      "quizCompleted": "Quiz completed",
+      "perfectQuiz": "Perfect quiz score"
+    },
+    "notifications": {
+      "badgeEarned": "Badge earned: {name}"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "desc": "Answers to common questions about splitting and using the application",
+      "q1": "Is splitting always a symptom of BPD?",
+      "a1": "No, splitting can also occur in people without a BPD diagnosis, especially in situations of severe stress or as a result of traumatic experiences. However, in people with BPD it occurs regularly and significantly affects their relationships.",
+      "q2": "Does a person with BPD deliberately manipulate through splitting?",
+      "a2": "No, splitting is not conscious manipulation. It's an automatic defense mechanism that a person with BPD uses unconsciously to protect themselves from anxiety and emotional pain. Understanding this is key to an empathetic approach.",
+      "q3": "What are the most effective ways to deal with splitting?",
+      "a3": "The most effective ways are: staying calm, validating your partner's feelings without confirming false accusations, avoiding a defensive attitude, clear but empathetic communication, and, when possible, therapy (individual for both parties or couples therapy). Working on your own emotional stability is also key.",
+      "q4": "Can splitting be completely cured?",
+      "a4": "In the case of BPD, splitting can be reduced through appropriate therapy (e.g., Dialectical Behavior Therapy - DBT), but it rarely disappears completely. However, a person can learn to better manage this mechanism and its impact on relationships.",
+      "q5": "How to take care of yourself in a relationship with someone experiencing splitting?",
+      "a5": "Set clear boundaries and stick to them. Find support (friends, family, therapist). Remember that you are not responsible for the other person's emotions. Practice stress management techniques. Take care of your needs and mental health.",
+      "q6": "Does this app replace professional psychological help?",
+      "a6": "No, this app is an educational and supportive tool, but it does not replace professional psychological help. If you are experiencing serious difficulties in your relationship, it is worth consulting a psychologist or psychotherapist."
+    },
+    "footer": {
+      "about": "About",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use",
+      "contact": "Contact",
+      "tagline": "Created with conscious, empathetic living in mind. 💜"
+    }
+  }

@@ -1,0 +1,224 @@
+[
+    {
+      "id": "module1",
+      "title": "Zrozumienie splittingu",
+      "description": "Poznaj mechanizm splittingu i jego wpływ na relacje",
+      "lessons": [
+        {
+          "id": "module1-lesson1",
+          "title": "Czym jest splitting?",
+          "content": [
+            {
+              "type": "text",
+              "content": "<p>Splitting to mechanizm obronny, w którym osoba z BPD postrzega ludzi i sytuacje w sposób skrajny – jako całkowicie dobre lub złe, bez odcieni szarości.</p><p>Podczas splittingu może dojść do aktywacji układu nerwowego współczulnego (reakcja \"walcz lub uciekaj\"), co prowadzi do intensywnych reakcji emocjonalnych.</p>"
+            },
+            {
+              "type": "tip",
+              "icon": "💡",
+              "content": "<p>Splitting to nie świadoma manipulacja - to automatyczny mechanizm obronny, który osoba z BPD stosuje nieświadomie, aby chronić się przed lękiem i bólem emocjonalnym.</p>"
+            },
+            {
+              "type": "example",
+              "title": "Przykład splittingu",
+              "content": "<p>Ania i Tomek są parą. Gdy Tomek zapomniał zadzwonić do Ani wieczorem, jak obiecał, Ania (która ma cechy BPD) przeszła z myślenia \"Tomek jest wspaniałym, kochającym partnerem\" do \"Tomek mnie nie kocha, nigdy mu na mnie nie zależało\". To nagłe przejście z postrzegania Tomka jako całkowicie dobrego do całkowicie złego, bez uznania, że ludzie mogą popełniać błędy i nadal być dobrymi partnerami, jest przykładem splittingu.</p>"
+            },
+            {
+              "type": "text",
+              "content": "<h3>Splitting w kontekście BPD</h3><p>Osoby z zaburzeniem osobowości typu borderline (BPD) często doświadczają splittingu jako jednego z głównych objawów swojego stanu. Splitting pojawia się jako mechanizm radzenia sobie z intensywnymi emocjami i lękiem przed porzuceniem, które są charakterystyczne dla BPD.</p><p>W kontekście BPD, splitting może być szczególnie intensywny i mieć znaczący wpływ na relacje, pracę, oraz ogólne funkcjonowanie osoby.</p>"
+            }
+          ]
+        },
+        {
+          "id": "module1-lesson2",
+          "title": "Jak splitting wpływa na relacje?",
+          "content": [
+            {
+              "type": "text",
+              "content": "<p>Splitting może mieć znaczący wpływ na relacje interpersonalne, szczególnie te bliskie i intymne. Oto główne sposoby, w jakie wpływa on na dynamikę relacji:</p>"
+            },
+            {
+              "type": "example",
+              "title": "Przykład wpływu na relację",
+              "content": "<p>Wyobraź sobie sytuację, w której zapomniałeś odpowiedzieć na wiadomość partnerki przez kilka godzin, ponieważ byłeś zajęty w pracy.</p><p>W normalnej sytuacji mogłoby to wywołać lekkie rozczarowanie lub frustrację, ale ostatecznie zrozumienie.</p><p>Jednak w przypadku splittingu, może to zostać zinterpretowane jako dowód, że \"nie zależy Ci\" lub nawet że \"nigdy nie zależało\" - co może prowadzić do intensywnej reakcji emocjonalnej, oskarżeń o celowe zaniedbanie, a nawet gróźb zakończenia relacji.</p>"
+            },
+            {
+              "type": "table",
+              "caption": "Wpływ splittingu na relacje",
+              "header": ["Aspekt", "Wpływ"],
+              "rows": [
+                ["Postrzeganie partnera", "Partner jest widziany albo jako idealny (idealizacja), albo jako całkowicie zły (dewaluacja), często z nagłymi przejściami między tymi skrajnościami."],
+                ["Stabilność relacji", "Relacja może być bardzo intensywna, ale niestabilna, z cyklami zbliżania się i oddalania."],
+                ["Komunikacja", "Trudności w prowadzeniu konstruktywnych rozmów, szczególnie w sytuacjach konfliktowych."],
+                ["Zaufanie", "Problemy z budowaniem trwałego zaufania z powodu zmiennego postrzegania intencji partnera."],
+                ["Rozwiązywanie konfliktów", "Konflikty mogą szybko eskalować i być trudne do rozwiązania w konstruktywny sposób."]
+              ]
+            },
+            {
+              "type": "tip",
+              "icon": "🔑",
+              "content": "<p>Zrozumienie, że splitting jest mechanizmem obronnym, a nie celowym działaniem, może pomóc w zachowaniu spokoju i empatii podczas trudnych momentów w relacji.</p>"
+            }
+          ]
+        },
+        {
+          "id": "module1-lesson3",
+          "title": "Objawy splittingu",
+          "content": [
+            {
+              "type": "text",
+              "content": "<p>Splitting może manifestować się na wiele sposobów. Poznanie tych objawów pomoże Ci rozpoznać, kiedy partner doświadcza splittingu, co jest pierwszym krokiem do odpowiedniej reakcji.</p>"
+            },
+            {
+              "type": "table",
+              "header": ["Objaw", "Opis"],
+              "rows": [
+                ["Impulsywne zachowania", "Nagłe działania jak wysyłanie obraźliwych wiadomości, zrywanie kontaktu, groźby rozstania."],
+                ["Bezpodstawne oskarżenia", "Przypisywanie Ci złych intencji, których nie miałeś/aś."],
+                ["Nadinterpretacje", "Dopatrywanie się ukrytych znaczeń w neutralnych zachowaniach."],
+                ["Złośliwość i późniejszy żal", "Próby ukarania Cię, po których może nastąpić poczucie winy i próby naprawy."],
+                ["Postrzeganie siebie jako ofiary", "Przekonanie, że jest się celowo krzywdzonym, manipulowanym lub nierozumianym."],
+                ["Utrata kontroli", "Intensywny gniew prowadzący do utraty samokontroli."],
+                ["Nadmierna reakcja", "Reakcje emocjonalne nieproporcjonalne do sytuacji."]
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Sygnały splittingu w codziennej komunikacji",
+              "content": "<p><strong>Absolutne stwierdzenia</strong> - Używanie słów \"zawsze\" i \"nigdy\": \"Zawsze mnie zawodzisz\", \"Nigdy mnie nie słuchasz\", \"Za każdym razem robisz to samo\".</p><p><strong>Nagłe zmiany w komunikacji</strong> - Przejście od czułych wiadomości do zimnych lub wrogich w krótkim czasie.</p><p><strong>Blokowanie kontaktu</strong> - Nagłe ignorowanie wiadomości lub połączeń bez wyraźnego powodu.</p>"
+            },
+            {
+              "type": "tip",
+              "icon": "⚠️",
+              "content": "<p>Pamiętaj, że objawy splittingu mogą przypominać inne problemy psychologiczne lub być po prostu wyrazem silnego stresu. Rozpoznanie wzorca tych zachowań w czasie jest kluczowe dla właściwej identyfikacji.</p>"
+            }
+          ]
+        },
+        {
+          "id": "module1-lesson4",
+          "title": "Błędne koło splittingu",
+          "content": [
+            {
+              "type": "text",
+              "content": "<p>Splitting często prowadzi do powstania błędnego koła, które może się samopodtrzymywać i prowadzić do coraz większych problemów w relacji. Zrozumienie tego cyklu jest kluczowe, aby móc go przerwać.</p><h3>Jak działa błędne koło splittingu:</h3>"
+            },
+            {
+              "type": "text",
+              "content": "<ol><li><strong>Uczucie zranienia:</strong> Osoba z BPD doświadcza uczucia zranienia, często przypominającego dawne traumy.</li><li><strong>Projekcja uczuć:</strong> Te trudne uczucia są projektowane na partnera.</li><li><strong>Oskarżenie partnera:</strong> Partner jest oskarżany o celowe zranienie lub złe intencje.</li><li><strong>Reakcja obronna:</strong> Partner broni się lub próbuje wyjaśnić, co jest postrzegane jako atak.</li><li><strong>Eskalacja splittingu:</strong> Pierwotne poczucie zagrożenia nasila się, prowadząc do głębszego splittingu.</li><li><strong>Konflikt:</strong> Dochodzi do konfliktu, który może eskalować.</li><li><strong>Poczucie bezradności:</strong> Partner czuje, że cokolwiek powie, będzie \"tym złym\".</li><li><strong>Pogłębienie problemu:</strong> Negatywne doświadczenie potwierdza pierwotne lęki osoby z BPD.</li></ol>"
+            },
+            {
+              "type": "tip",
+              "icon": "💡",
+              "content": "<p>Przerwanie tego cyklu wymaga świadomości obu stron i często zewnętrznego wsparcia. Wasze reakcje mogą albo wzmacniać, albo osłabiać to błędne koło.</p>"
+            },
+            {
+              "type": "example",
+              "title": "Przykład błędnego koła",
+              "content": "<p><strong>Sytuacja początkowa:</strong> Spóźniasz się 20 minut na spotkanie z partnerką.</p><p><strong>Uczucie zranienia:</strong> Partnerka czuje się porzucona, co przypomina jej wcześniejsze doświadczenia odrzucenia.</p><p><strong>Projekcja i oskarżenie:</strong> \"Zawsze się spóźniasz! Nie obchodzę cię! Robisz to specjalnie, żeby mnie zranić!\"</p><p><strong>Twoja obrona:</strong> \"To nieprawda, byłem w korku. Nie dramatyzuj, to tylko 20 minut.\"</p><p><strong>Eskalacja:</strong> \"Widzisz? Nawet nie przepraszasz! Zawsze umniejszasz moje uczucia! Nigdy cię nie obchodziłam!\"</p><p><strong>Konflikt:</strong> Rozwija się kłótnia, która może trwać godzinami.</p><p><strong>Twoje poczucie bezradności:</strong> \"Cokolwiek powiem, i tak będzie źle. Nie da się z nią rozmawiać.\"</p><p><strong>Pogłębienie problemu:</strong> Partnerka czuje, że jej obawy się potwierdziły - \"Wiedziałam, że mnie nie kochasz.\"</p>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "module2",
+      "title": "Techniki komunikacji",
+      "description": "Poznaj skuteczne metody komunikacji w trudnych sytuacjach",
+      "lessons": [
+        {
+          "id": "module2-lesson1",
+          "title": "Podstawy komunikacji z osobą doświadczającą splittingu",
+          "content": [
+            {
+              "type": "text",
+              "content": "<p>Efektywna komunikacja z osobą doświadczającą splittingu wymaga zrozumienia, cierpliwości i określonych technik, które mogą pomóc w utrzymaniu konstruktywnej rozmowy, nawet w trudnych momentach.</p><h3>Najważniejsze zasady:</h3>"
+            },
+            {
+              "type": "table",
+              "header": ["Zasada", "Opis"],
+              "rows": [
+                ["Zachowaj spokój", "Twój spokój pomoże ustabilizować sytuację. Kontroluj ton głosu, mowę ciała i tempo mówienia."],
+                ["Waliduj uczucia", "Pokaż, że rozumiesz emocje partnera, nawet jeśli nie zgadzasz się z jego interpretacją sytuacji."],
+                ["Unikaj obronnego nastawienia", "Przyjmowanie postawy obronnej często prowadzi do eskalacji konfliktu."],
+                ["Komunikuj granice", "Jasno wyrażaj swoje granice, ale rób to z szacunkiem i empatią."],
+                ["Używaj prostego języka", "W momentach intensywnych emocji, jasny i prosty język jest łatwiejszy do zrozumienia."],
+                ["Unikaj absolutnych stwierdzeń", "Nie używaj słów takich jak \"zawsze\" czy \"nigdy\", które mogą wzmacniać splitting."]
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Przykład konstruktywnej komunikacji",
+              "content": "<p><strong>Sytuacja:</strong> Twoja partnerka oskarża Cię, że zawsze wybierasz swoich przyjaciół zamiast niej, po tym jak umówiłeś się na piwo z kolegą.</p><p><strong>Nieefektywna odpowiedź:</strong> \"To nieprawda! Zawsze daję ci pierwszeństwo. Jesteś niesprawiedliwa!\"</p><p><strong>Efektywna odpowiedź:</strong> \"Widzę, że jest ci przykro i czujesz się pomijana, gdy spędzam czas z przyjaciółmi. Twoje uczucia są dla mnie ważne. Chcę spędzać czas zarówno z tobą, jak i czasem z przyjaciółmi. Może możemy ustalić, jak możemy to zrównoważyć, żeby oboje czuli się dobrze?\"</p>"
+            },
+            {
+              "type": "tip",
+              "icon": "⚠️",
+              "content": "<p>Pamiętaj, że w momentach intensywnego splittingu osoba może nie być zdolna do racjonalnej rozmowy. Czasem najlepszym rozwiązaniem jest spokojne zaproponowanie przerwy i powrót do rozmowy, gdy emocje opadną.</p>"
+            }
+          ]
+        },
+        {
+          "id": "module2-lesson2",
+          "title": "Technika SET",
+          "content": [
+            {
+              "type": "text",
+              "content": "<p>Technika SET (Support, Empathy, Truth) to skuteczne narzędzie komunikacji, które pomaga wyrażać swoje myśli i uczucia w sposób jasny i empatyczny, jednocześnie stawiając zdrowe granice. Jest szczególnie pomocna w komunikacji z osobami doświadczającymi splittingu.</p>"
+            },
+            {
+              "type": "table",
+              "caption": "Komponenty techniki SET",
+              "header": ["Komponent", "Opis", "Przykład"],
+              "rows": [
+                ["S - Support (Wsparcie)", "Wyrażenie troski i wsparcia dla drugiej osoby", "\"Zależy mi na tobie\", \"Martwię się o ciebie\""],
+                ["E - Empathy (Empatia)", "Pokazanie, że rozumiesz uczucia drugiej osoby", "\"Widzę, że cierpisz\", \"Rozumiem, że to dla ciebie trudne\""],
+                ["T - Truth (Prawda)", "Jasne wyrażenie swojej perspektywy lub potrzeby", "\"Potrzebuję chwili na uspokojenie się\", \"Teraz muszę się skupić na pracy\""]
+              ]
+            },
+            {
+              "type": "example",
+              "title": "Przykłady zastosowania techniki SET",
+              "content": "<p><strong>Sytuacja 1:</strong> Twoja partnerka oskarża Cię o to, że jej nie kochasz, ponieważ potrzebujesz czasu dla siebie.</p><p><strong>Odpowiedź z użyciem SET:</strong> \"Bardzo mi na tobie zależy (Support). Widzę, że czujesz się zraniona i boisz się, że cię zostawię (Empathy). Potrzebuję jednak trochę czasu dla siebie, żeby naładować baterie i móc być lepszą wersją siebie, także dla ciebie (Truth).\"</p><p><strong>Sytuacja 2:</strong> Twoja partnerka dzwoni do ciebie podczas ważnego spotkania w pracy, oczekując natychmiastowej rozmowy.</p><p><strong>Odpowiedź z użyciem SET:</strong> \"Kocham cię i chcę z tobą rozmawiać (Support). Rozumiem, że potrzebujesz teraz mojego wsparcia (Empathy). Jestem jednak na ważnym spotkaniu i nie mogę teraz rozmawiać. Zadzwonię do ciebie za godzinę, gdy będę miał przestrzeń, żeby być w pełni obecny (Truth).\"</p>"
+            },
+            {
+              "type": "tip",
+              "icon": "💡",
+              "content": "<p>Kolejność elementów w technice SET może być elastyczna. Czasami w zależności od sytuacji lepiej zacząć od empatii (E), potem wyrazić wsparcie (S), a na końcu prawdę (T). Kluczowe jest, by zawrzeć wszystkie trzy elementy.</p>"
+            }
+          ]
+        },
+        {
+          "id": "module2-lesson3",
+          "title": "Kanapka komunikacyjna",
+          "content": [
+            {
+              "type": "text",
+              "content": "<p>\"Kanapka komunikacyjna\" to technika, która pomaga w przekazywaniu trudnych komunikatów i stawianiu granic w sposób, który minimalizuje ryzyko eskalacji konfliktu i splittingu. Nazwa pochodzi od struktury komunikatu, który - podobnie jak kanapka - składa się z trzech warstw.</p>"
+            },
+            {
+              "type": "text",
+              "content": "<h3>Struktura kanapki komunikacyjnej:</h3><ol><li><strong>Pozytywna warstwa (chleb):</strong> Empatia lub zrozumienie dla uczuć drugiej osoby</li><li><strong>Trudny komunikat (nadzienie):</strong> Jasno postawiona granica lub trudna informacja</li><li><strong>Pozytywna warstwa (chleb):</strong> Propozycja rozwiązania lub konstruktywnej alternatywy</li></ol>"
+            },
+            {
+              "type": "example",
+              "title": "Przykłady kanapki komunikacyjnej",
+              "content": "<p><strong>Sytuacja 1:</strong> Potrzebujesz czasu na skupioną pracę, a partnerka ciągle Cię przerywa.</p><p><strong>Kanapka komunikacyjna:</strong><br>\"Widzę, że chcesz spędzić ze mną czas i cenię to, że szukasz mojego towarzystwa (empatia).<br>Potrzebuję teraz dwóch godzin nieprzerywanej pracy, żeby skończyć ten projekt (granica).<br>Co powiesz na to, żebyśmy po tych dwóch godzinach zrobili sobie przerwę i wspólnie zjedli obiad? (alternatywa)\"</p><p><strong>Sytuacja 2:</strong> Partnerka oskarża Cię o celowe ignorowanie jej wiadomości, gdy byłeś na spotkaniu.</p><p><strong>Kanapka komunikacyjna:</strong><br>\"Rozumiem, że czułaś się ignorowana i zależało Ci na mojej odpowiedzi (empatia).<br>Byłem na spotkaniu i nie mogłem sprawdzać telefonu (granica/wyjaśnienie).<br>W przyszłości mogę Ci dać znać przed spotkaniem, że będę niedostępny, żebyś wiedziała, czego się spodziewać (alternatywa).\"</p>"
+            },
+            {
+              "type": "tip",
+              "icon": "✅",
+              "content": "<p>Kanapka komunikacyjna działa szczególnie dobrze, gdy jest szczera i autentyczna. Jeśli pierwsza i trzecia warstwa są nieszczere lub mechaniczne, technika może być odebrana jako manipulacja. Ważne jest, by naprawdę starać się zrozumieć perspektywę drugiej osoby i proponować realistyczne alternatywy.</p>"
+            },
+            {
+              "type": "table",
+              "caption": "Porównanie techniki SET i kanapki komunikacyjnej",
+              "header": ["Technika", "Struktura", "Najlepsze zastosowanie"],
+              "rows": [
+                ["SET", "Support (wsparcie), Empathy (empatia), Truth (prawda)", "Gdy potrzebujesz wyrazić trudną prawdę lub postawić granicę w sposób empatyczny"],
+                ["Kanapka komunikacyjna", "Empatia/Zrozumienie → Granica/Trudny komunikat → Alternatywa/Rozwiązanie", "Gdy potrzebujesz postawić granicę i zaproponować konstruktywne rozwiązanie"]
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]

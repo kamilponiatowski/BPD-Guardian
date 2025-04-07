@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="app.title">Splitting Coach - Naucz się radzić sobie ze splittingiem</title>
+    <meta name="description" content="Interaktywna aplikacja do nauki technik radzenia sobie ze splittingiem w relacjach z osobami z cechami BPD" data-i18n="app.description">
+    <link rel="stylesheet" href="css/utils/variables.css">
+    <link rel="stylesheet" href="css/utils/typography.css">
+    <link rel="stylesheet" href="css/utils/accessibility.css">
+    <link rel="stylesheet" href="css/components/navigation.css">
+    <link rel="stylesheet" href="css/components/quiz.css">
+    <link rel="stylesheet" href="css/components/badges.css">
+    <link rel="stylesheet" href="css/components/progress.css">
+    <link rel="stylesheet" href="css/components/cards.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <a href="#" class="header__logo">
+                <img src="assets/icons/logo.svg" alt="Splitting Coach Logo" width="48" height="48">
+                <span class="header__title" data-i18n="app.name">Splitting Coach</span>
+            </a>
+            <nav class="nav" aria-label="Menu główne">
+                <button class="nav__toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Otwórz menu">
+                    <span class="nav__toggle-icon"></span>
+                </button>
+                <ul id="main-menu" class="nav__menu">
+                    <li class="nav__item"><a href="#" class="nav__link" data-page="home" data-i18n="nav.home">Strona główna</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link" data-page="modules" data-i18n="nav.modules">Moduły</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link" data-page="progress" data-i18n="nav.progress">Twój postęp</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link" data-page="faq" data-i18n="nav.faq">FAQ</a></li>
+                </ul>
+            </nav>
+            <div class="header__actions">
+                <div class="language-switcher">
+                    <button class="language-switcher__btn" data-lang="pl">PL</button>
+                    <button class="language-switcher__btn" data-lang="en">EN</button>
+                </div>
+                <div class="user-progress">
+                    <span class="user-progress__points" data-i18n-param="pointsValue" data-i18n="user.points">Punkty: 0</span>
+                    <div class="user-progress__badges" aria-label="Zdobyte odznaki">
+                        <!-- Ikony odznak będą dodawane dynamicznie -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Page: Home -->
+        <section id="home" class="page page--active">
+            <div class="hero">
+                <div class="hero__content">
+                    <h1 class="hero__title" data-i18n="home.title">Naucz się radzić sobie ze splittingiem</h1>
+                    <p class="hero__subtitle" data-i18n="home.subtitle">Interaktywna aplikacja do nauki technik wspierających relacje z osobami z cechami BPD</p>
+                    <div class="hero__benefits">
+                        <div class="benefit">
+                            <div class="benefit__icon">🧠</div>
+                            <h3 class="benefit__title" data-i18n="home.benefit1.title">Zrozum mechanizm</h3>
+                            <p class="benefit__desc" data-i18n="home.benefit1.desc">Poznaj, czym jest splitting i jak wpływa na relacje</p>
+                        </div>
+                        <div class="benefit">
+                            <div class="benefit__icon">💬</div>
+                            <h3 class="benefit__title" data-i18n="home.benefit2.title">Naucz się technik</h3>
+                            <p class="benefit__desc" data-i18n="home.benefit2.desc">Praktyczne narzędzia komunikacji i zarządzania emocjami</p>
+                        </div>
+                        <div class="benefit">
+                            <div class="benefit__icon">❤️</div>
+                            <h3 class="benefit__title" data-i18n="home.benefit3.title">Buduj zdrowe relacje</h3>
+                            <p class="benefit__desc" data-i18n="home.benefit3.desc">Stosuj poznane techniki w codziennych sytuacjach</p>
+                        </div>
+                    </div>
+                    <button class="btn btn--primary hero__cta" data-page="modules" data-i18n="home.cta">Rozpocznij naukę</button>
+                </div>
+                <div class="hero__image">
+                    <img src="assets/images/hero-illustration.svg" alt="" aria-hidden="true">
+                </div>
+            </div>
+
+            <div class="about-section">
+                <h2 class="about-section__title" data-i18n="home.about.title">Czym jest splitting?</h2>
+                <div class="about-section__content">
+                    <p data-i18n="home.about.desc1">Splitting to mechanizm obronny, w którym osoba z BPD postrzega ludzi i sytuacje w sposób skrajny – jako całkowicie dobre lub złe, bez odcieni szarości.</p>
+                    <p data-i18n="home.about.desc2">Podczas splittingu może dojść do aktywacji układu nerwowego współczulnego (reakcja "walcz lub uciekaj"), co prowadzi do intensywnych reakcji emocjonalnych.</p>
+                </div>
+            </div>
+
+            <div class="how-it-works">
+                <h2 class="how-it-works__title" data-i18n="home.howItWorks.title">Jak działa aplikacja?</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step__number">1</div>
+                        <h3 class="step__title" data-i18n="home.howItWorks.step1.title">Ucz się</h3>
+                        <p class="step__desc" data-i18n="home.howItWorks.step1.desc">Zdobywaj wiedzę w interaktywnych modułach</p>
+                    </div>
+                    <div class="step">
+                        <div class="step__number">2</div>
+                        <h3 class="step__title" data-i18n="home.howItWorks.step2.title">Ćwicz</h3>
+                        <p class="step__desc" data-i18n="home.howItWorks.step2.desc">Sprawdzaj swoją wiedzę w quizach i scenariuszach</p>
+                    </div>
+                    <div class="step">
+                        <div class="step__number">3</div>
+                        <h3 class="step__title" data-i18n="home.howItWorks.step3.title">Zastosuj</h3>
+                        <p class="step__desc" data-i18n="home.howItWorks.step3.desc">Wykorzystaj narzędzia w swoich relacjach</p>
+                    </div>
+                    <div class="step">
+                        <div class="step__number">4</div>
+                        <h3 class="step__title" data-i18n="home.howItWorks.step4.title">Rozwijaj się</h3>
+                        <p class="step__desc" data-i18n="home.howItWorks.step4.desc">Zdobywaj odznaki i odblokowuj nowe treści</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page: Modules -->
+        <section id="modules" class="page">
+            <div class="page__header">
+                <h1 class="page__title" data-i18n="modules.title">Moduły edukacyjne</h1>
+                <p class="page__desc" data-i18n="modules.desc">Wybierz moduł, aby rozpocząć naukę. Moduły najlepiej przerabiać po kolei, od podstaw do zaawansowanych technik.</p>
+            </div>
+            
+            <div class="modules-grid" id="modules-container">
+                <!-- Moduły będą dodawane dynamicznie -->
+                <!-- Przykładowy moduł: -->
+                <div class="module-card" data-module-id="module1">
+                    <div class="module-card__header">
+                        <span class="module-card__number">Moduł 1</span>
+                        <div class="module-card__progress" aria-label="Postęp: 0%">
+                            <div class="module-card__progress-bar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <h2 class="module-card__title" data-i18n="modules.module1.title">Zrozumienie splittingu</h2>
+                    <p class="module-card__desc" data-i18n="modules.module1.desc">Poznaj mechanizm splittingu i jego wpływ na relacje</p>
+                    <ul class="module-card__lessons">
+                        <li class="module-card__lesson" data-i18n="modules.module1.lesson1">Czym jest splitting?</li>
+                        <li class="module-card__lesson" data-i18n="modules.module1.lesson2">Jak splitting wpływa na relacje?</li>
+                        <li class="module-card__lesson" data-i18n="modules.module1.lesson3">Objawy splittingu</li>
+                        <li class="module-card__lesson" data-i18n="modules.module1.lesson4">Błędne koło splittingu</li>
+                    </ul>
+                    <button class="btn module-card__cta" data-module="module1" data-i18n="modules.startBtn">Rozpocznij</button>
+                    <div class="module-card__badges">
+                        <div class="badge badge--locked" data-badge="module1-complete" aria-label="Odznaka za ukończenie modułu (zablokowana)">🔒</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page: Module Content -->
+        <section id="module-content" class="page">
+            <div class="module-nav">
+                <button class="module-nav__back" aria-label="Powrót do listy modułów">
+                    <span aria-hidden="true">←</span> <span data-i18n="module.back">Powrót</span>
+                </button>
+                <div class="module-nav__progress" aria-label="Postęp w module: 0%">
+                    <div class="module-nav__progress-bar"></div>
+                </div>
+            </div>
+            
+            <div class="module-content" id="module-content-container">
+                <!-- Treść modułu będzie ładowana dynamicznie -->
+            </div>
+            
+            <div class="module-navigation">
+                <button class="btn btn--secondary module-navigation__prev" data-i18n="module.prev" disabled>Poprzednia lekcja</button>
+                <button class="btn btn--primary module-navigation__next" data-i18n="module.next">Następna lekcja</button>
+            </div>
+        </section>
+
+        <!-- Page: Quiz -->
+        <section id="quiz" class="page">
+            <div class="quiz-container">
+                <h1 class="quiz__title" data-i18n="quiz.title">Quiz: Sprawdź swoją wiedzę</h1>
+                <div class="quiz__progress" aria-label="Postęp quizu: 0%">
+                    <div class="quiz__progress-bar"></div>
+                </div>
+                
+                <div class="quiz__content" id="quiz-content">
+                    <!-- Pytania quizu będą ładowane dynamicznie -->
+                </div>
+                
+                <div class="quiz__navigation">
+                    <button class="btn btn--secondary quiz__prev" data-i18n="quiz.prev" disabled>Poprzednie pytanie</button>
+                    <button class="btn btn--primary quiz__next" data-i18n="quiz.next">Następne pytanie</button>
+                    <button class="btn btn--primary quiz__finish" data-i18n="quiz.finish" style="display: none;">Zakończ quiz</button>
+                </div>
+            </div>
+            
+            <div class="quiz-results" style="display: none;">
+                <h2 class="quiz-results__title" data-i18n="quiz.results.title">Twój wynik</h2>
+                <div class="quiz-results__score">
+                    <span class="quiz-results__percentage">0%</span>
+                    <div class="quiz-results__correct" data-i18n-param="correctAnswers,totalQuestions" data-i18n="quiz.results.correct">Poprawne odpowiedzi: 0 z 0</div>
+                </div>
+                <div class="quiz-results__feedback"></div>
+                <div class="quiz-results__actions">
+                    <button class="btn btn--secondary quiz-results__retry" data-i18n="quiz.results.retry">Spróbuj ponownie</button>
+                    <button class="btn btn--primary quiz-results__continue" data-i18n="quiz.results.continue">Kontynuuj naukę</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page: Progress -->
+        <section id="progress" class="page">
+            <div class="page__header">
+                <h1 class="page__title" data-i18n="progress.title">Twój postęp</h1>
+                <p class="page__desc" data-i18n="progress.desc">Śledź swoje osiągnięcia i zdobyte odznaki</p>
+            </div>
+            
+            <div class="progress-dashboard">
+                <div class="progress-summary">
+                    <div class="progress-summary__item">
+                        <div class="progress-summary__value" id="completed-modules">0</div>
+                        <div class="progress-summary__label" data-i18n="progress.completedModules">Ukończone moduły</div>
+                    </div>
+                    <div class="progress-summary__item">
+                        <div class="progress-summary__value" id="earned-points">0</div>
+                        <div class="progress-summary__label" data-i18n="progress.earnedPoints">Zdobyte punkty</div>
+                    </div>
+                    <div class="progress-summary__item">
+                        <div class="progress-summary__value" id="earned-badges">0</div>
+                        <div class="progress-summary__label" data-i18n="progress.earnedBadges">Zdobyte odznaki</div>
+                    </div>
+                </div>
+                
+                <div class="badges-collection">
+                    <h2 class="badges-collection__title" data-i18n="progress.badges.title">Twoje odznaki</h2>
+                    <div class="badges-collection__grid" id="badges-container">
+                        <!-- Odznaki będą dodawane dynamicznie -->
+                    </div>
+                </div>
+                
+                <div class="modules-progress">
+                    <h2 class="modules-progress__title" data-i18n="progress.modulesProgress.title">Postęp w modułach</h2>
+                    <div class="modules-progress__list" id="modules-progress-container">
+                        <!-- Postęp modułów będzie dodawany dynamicznie -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page: FAQ -->
+        <section id="faq" class="page">
+            <div class="page__header">
+                <h1 class="page__title" data-i18n="faq.title">Najczęściej zadawane pytania</h1>
+                <p class="page__desc" data-i18n="faq.desc">Odpowiedzi na najczęstsze pytania dotyczące splittingu i korzystania z aplikacji</p>
+            </div>
+            
+            <div class="faq-list" id="faq-container">
+                <!-- FAQ będzie ładowane dynamicznie -->
+                
+                <!-- Przykładowe pytanie FAQ -->
+                <div class="faq-item">
+                    <button class="faq-item__question" aria-expanded="false">
+                        <span data-i18n="faq.q1">Czy splitting zawsze jest objawem BPD?</span>
+                        <span class="faq-item__icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p data-i18n="faq.a1">Nie, splitting może wystąpić również u osób bez diagnozy BPD, zwłaszcza w sytuacjach silnego stresu lub w wyniku traumatycznych doświadczeń. Jednak u osób z BPD występuje on regularnie i znacząco wpływa na ich relacje.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__branding">
+                <img src="assets/icons/logo.svg" alt="" class="footer__logo" width="32" height="32">
+                <div class="footer__app-name" data-i18n="app.name">Splitting Coach</div>
+                <p class="footer__copyright">&copy; 2025</p>
+            </div>
+            <div class="footer__links">
+                <a href="#" class="footer__link" data-i18n="footer.about">O aplikacji</a>
+                <a href="#" class="footer__link" data-i18n="footer.privacy">Polityka prywatności</a>
+                <a href="#" class="footer__link" data-i18n="footer.terms">Warunki korzystania</a>
+                <a href="#" class="footer__link" data-i18n="footer.contact">Kontakt</a>
+            </div>
+            <p class="footer__tagline" data-i18n="footer.tagline">Tworzone z myślą o świadomym, empatycznym życiu. 💜</p>
+        </div>
+    </footer>
+
+    <!-- Notification Component -->
+    <div class="notification" id="notification" aria-live="polite" aria-hidden="true">
+        <div class="notification__content">
+            <div class="notification__icon"></div>
+            <div class="notification__message"></div>
+        </div>
+        <button class="notification__close" aria-label="Zamknij powiadomienie">×</button>
+    </div>
+
+    <!-- Achievement Modal -->
+    <div class="modal" id="achievement-modal" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1"></div>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="achievement-title">
+            <div class="modal__content achievement">
+                <div class="achievement__icon"></div>
+                <h2 class="achievement__title" id="achievement-title" data-i18n="achievement.earned">Zdobyto odznakę!</h2>
+                <p class="achievement__name"></p>
+                <p class="achievement__description"></p>
+                <div class="achievement__points" data-i18n-param="points" data-i18n="achievement.points">+0 punktów</div>
+                <button class="btn btn--primary achievement__close" data-i18n="achievement.close">Super!</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

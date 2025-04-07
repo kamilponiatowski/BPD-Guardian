@@ -1,0 +1,245 @@
+/* Accessibility Styles */
+
+/* Focus Styles */
+:focus {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+  
+  /* Focus Styles for Interactive Elements */
+  button:focus,
+  a:focus,
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+  
+  /* Keyboard Focus Only Styles */
+  .js-focus-visible :focus:not(.focus-visible) {
+    outline: none;
+  }
+  
+  .js-focus-visible .focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+  
+  /* Skip to Main Content Link */
+  .skip-link {
+    position: absolute;
+    top: -4rem;
+    left: 0;
+    padding: 1rem 1.5rem;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 700;
+    z-index: var(--z-index-modal);
+    transition: top 0.3s ease;
+    border-bottom-right-radius: var(--border-radius);
+  }
+  
+  .skip-link:focus {
+    top: 0;
+  }
+  
+  /* Screen Reader Only Utilities */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  
+  .not-sr-only {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+  
+  /* ARIA Hidden */
+  [aria-hidden="true"] {
+    display: none !important;
+  }
+  
+  /* Reduced Motion */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  
+  /* High Contrast Mode Adjustments */
+  @media (forced-colors: active) {
+    *:focus {
+      outline: 3px solid transparent; /* Will be replaced with system focus color */
+      outline-offset: 2px;
+    }
+    
+    /* Buttons should always have visible boundaries */
+    button {
+      border: 1px solid transparent; /* Will be visible in high contrast mode */
+    }
+  }
+  
+  /* Text Spacing */
+  .text-spacing-optimized {
+    line-height: 1.5;
+    letter-spacing: 0.12em;
+    word-spacing: 0.16em;
+  }
+  
+  /* Custom Controls Enhancements */
+  /* Custom checkboxes */
+  .custom-checkbox input[type="checkbox"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  
+  .custom-checkbox-label {
+    position: relative;
+    padding-left: 3rem;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .custom-checkbox-label::before,
+  .custom-checkbox-label::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.2rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: var(--border-radius-sm);
+  }
+  
+  .custom-checkbox-label::before {
+    border: 2px solid var(--color-border);
+    background-color: var(--color-white);
+    transition: border-color var(--transition-default), background-color var(--transition-default);
+  }
+  
+  input[type="checkbox"]:checked + .custom-checkbox-label::before {
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+  }
+  
+  .custom-checkbox-label::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+    background-size: 1.8rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity var(--transition-default);
+  }
+  
+  input[type="checkbox"]:checked + .custom-checkbox-label::after {
+    opacity: 1;
+  }
+  
+  input[type="checkbox"]:focus + .custom-checkbox-label::before {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+  
+  /* Custom radio */
+  .custom-radio input[type="radio"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  
+  .custom-radio-label {
+    position: relative;
+    padding-left: 3rem;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .custom-radio-label::before,
+  .custom-radio-label::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+  }
+  
+  .custom-radio-label::before {
+    left: 0;
+    top: 0.2rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    border: 2px solid var(--color-border);
+    background-color: var(--color-white);
+    transition: border-color var(--transition-default), background-color var(--transition-default);
+  }
+  
+  .custom-radio-label::after {
+    left: 0.6rem;
+    top: 0.8rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--color-white);
+    transform: scale(0);
+    transition: transform var(--transition-default);
+  }
+  
+  input[type="radio"]:checked + .custom-radio-label::before {
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+  }
+  
+  input[type="radio"]:checked + .custom-radio-label::after {
+    transform: scale(1);
+  }
+  
+  input[type="radio"]:focus + .custom-radio-label::before {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+  
+  /* Form Error States */
+  .form-field--error label {
+    color: var(--color-error);
+  }
+  
+  .form-field--error input,
+  .form-field--error select,
+  .form-field--error textarea {
+    border-color: var(--color-error);
+    background-color: var(--color-error-light);
+  }
+  
+  .error-message {
+    color: var(--color-error);
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+  }

@@ -1,0 +1,22 @@
+{
+    "name": "splitting-coach",
+    "version": "1.0.0",
+    "description": "Interaktywna aplikacja edukacyjna do nauki technik radzenia sobie ze splittingiem",
+    "main": "js/app.js",
+    "scripts": {
+      "start": "http-server -p 8080 -c-1",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+      "bpd",
+      "splitting",
+      "psychology",
+      "education",
+      "gamification"
+    ],
+    "author": "Kamil",
+    "license": "MIT",
+    "devDependencies": {
+      "http-server": "^14.1.1"
+    }
+  }

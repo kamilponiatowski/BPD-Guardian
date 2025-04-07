@@ -1,0 +1,159 @@
+{
+    "app": {
+      "name": "Splitting Coach",
+      "title": "Splitting Coach - Naucz się radzić sobie ze splittingiem",
+      "description": "Interaktywna aplikacja do nauki technik radzenia sobie ze splittingiem w relacjach z osobami z cechami BPD"
+    },
+    "nav": {
+      "home": "Strona główna",
+      "modules": "Moduły",
+      "progress": "Twój postęp",
+      "faq": "FAQ"
+    },
+    "user": {
+      "points": "Punkty: {pointsValue}"
+    },
+    "home": {
+      "title": "Naucz się radzić sobie ze splittingiem",
+      "subtitle": "Interaktywna aplikacja do nauki technik wspierających relacje z osobami z cechami BPD",
+      "benefit1": {
+        "title": "Zrozum mechanizm",
+        "desc": "Poznaj, czym jest splitting i jak wpływa na relacje"
+      },
+      "benefit2": {
+        "title": "Naucz się technik",
+        "desc": "Praktyczne narzędzia komunikacji i zarządzania emocjami"
+      },
+      "benefit3": {
+        "title": "Buduj zdrowe relacje",
+        "desc": "Stosuj poznane techniki w codziennych sytuacjach"
+      },
+      "cta": "Rozpocznij naukę",
+      "about": {
+        "title": "Czym jest splitting?",
+        "desc1": "Splitting to mechanizm obronny, w którym osoba z BPD postrzega ludzi i sytuacje w sposób skrajny – jako całkowicie dobre lub złe, bez odcieni szarości.",
+        "desc2": "Podczas splittingu może dojść do aktywacji układu nerwowego współczulnego (reakcja \"walcz lub uciekaj\"), co prowadzi do intensywnych reakcji emocjonalnych."
+      },
+      "howItWorks": {
+        "title": "Jak działa aplikacja?",
+        "step1": {
+          "title": "Ucz się",
+          "desc": "Zdobywaj wiedzę w interaktywnych modułach"
+        },
+        "step2": {
+          "title": "Ćwicz",
+          "desc": "Sprawdzaj swoją wiedzę w quizach i scenariuszach"
+        },
+        "step3": {
+          "title": "Zastosuj",
+          "desc": "Wykorzystaj narzędzia w swoich relacjach"
+        },
+        "step4": {
+          "title": "Rozwijaj się",
+          "desc": "Zdobywaj odznaki i odblokowuj nowe treści"
+        }
+      }
+    },
+    "modules": {
+      "title": "Moduły edukacyjne",
+      "desc": "Wybierz moduł, aby rozpocząć naukę. Moduły najlepiej przerabiać po kolei, od podstaw do zaawansowanych technik.",
+      "module": "Moduł",
+      "progress": "Postęp",
+      "startBtn": "Rozpocznij",
+      "reviewBtn": "Powtórz",
+      "completedBadge": "Odznaka za ukończenie modułu",
+      "lockedBadge": "Odznaka za ukończenie modułu (zablokowana)",
+      "module1": {
+        "title": "Zrozumienie splittingu",
+        "desc": "Poznaj mechanizm splittingu i jego wpływ na relacje",
+        "lesson1": "Czym jest splitting?",
+        "lesson2": "Jak splitting wpływa na relacje?",
+        "lesson3": "Objawy splittingu",
+        "lesson4": "Błędne koło splittingu"
+      },
+      "module2": {
+        "title": "Techniki komunikacji",
+        "desc": "Poznaj skuteczne metody komunikacji w trudnych sytuacjach",
+        "lesson1": "Podstawy komunikacji z osobą doświadczającą splittingu",
+        "lesson2": "Technika SET",
+        "lesson3": "Kanapka komunikacyjna"
+      }
+    },
+    "module": {
+      "back": "Powrót",
+      "next": "Następna lekcja",
+      "prev": "Poprzednia lekcja",
+      "toQuiz": "Przejdź do quizu",
+      "example": "Przykład"
+    },
+    "quiz": {
+      "title": "Quiz: Sprawdź swoją wiedzę",
+      "next": "Następne pytanie",
+      "prev": "Poprzednie pytanie",
+      "finish": "Zakończ quiz",
+      "noAnswerSelected": "Zaznacz odpowiedź, aby kontynuować",
+      "results": {
+        "title": "Twój wynik",
+        "correct": "Poprawne odpowiedzi: {correctAnswers} z {totalQuestions}",
+        "excellent": "Gratulacje! Doskonały wynik! Świetnie opanowałeś/aś materiał z tego modułu.",
+        "good": "Dobra robota! Rozumiesz większość materiału. Możesz jeszcze dopracować niektóre obszary.",
+        "needsImprovement": "Warto jeszcze powtórzyć materiał z tego modułu, aby lepiej zrozumieć koncepcje.",
+        "retry": "Spróbuj ponownie",
+        "continue": "Kontynuuj naukę"
+      }
+    },
+    "progress": {
+      "title": "Twój postęp",
+      "desc": "Śledź swoje osiągnięcia i zdobyte odznaki",
+      "completedModules": "Ukończone moduły",
+      "earnedPoints": "Zdobyte punkty",
+      "earnedBadges": "Zdobyte odznaki",
+      "badges": {
+        "title": "Twoje odznaki"
+      },
+      "modulesProgress": {
+        "title": "Postęp w modułach"
+      }
+    },
+    "badges": {
+      "locked": "Odznaka zablokowana",
+      "lockedBadge": "Odznaka {name} (zablokowana)"
+    },
+    "achievement": {
+      "earned": "Zdobyto odznakę!",
+      "points": "+{points} punktów",
+      "close": "Super!"
+    },
+    "points": {
+      "lessonCompleted": "Ukończenie lekcji: {lesson}",
+      "moduleCompleted": "Ukończenie modułu: {module}",
+      "quizCompleted": "Ukończenie quizu",
+      "perfectQuiz": "Idealny wynik w quizie"
+    },
+    "notifications": {
+      "badgeEarned": "Zdobyto odznakę: {name}"
+    },
+    "faq": {
+      "title": "Najczęściej zadawane pytania",
+      "desc": "Odpowiedzi na najczęstsze pytania dotyczące splittingu i korzystania z aplikacji",
+      "q1": "Czy splitting zawsze jest objawem BPD?",
+      "a1": "Nie, splitting może wystąpić również u osób bez diagnozy BPD, zwłaszcza w sytuacjach silnego stresu lub w wyniku traumatycznych doświadczeń. Jednak u osób z BPD występuje on regularnie i znacząco wpływa na ich relacje.",
+      "q2": "Czy osoba z BPD celowo manipuluje za pomocą splittingu?",
+      "a2": "Nie, splitting nie jest świadomą manipulacją. To automatyczny mechanizm obronny, który osoba z BPD stosuje nieświadomie, aby chronić się przed lękiem i bólem emocjonalnym. Zrozumienie tego jest kluczowe dla empatycznego podejścia.",
+      "q3": "Jakie są najskuteczniejsze sposoby radzenia sobie ze splittingiem?",
+      "a3": "Najskuteczniejsze sposoby to: zachowanie spokoju, walidacja uczuć partnera bez potwierdzania nieprawdziwych oskarżeń, unikanie obronnej postawy, jasna ale empatyczna komunikacja oraz, kiedy to możliwe, terapia (indywidualna dla obu stron lub terapia par). Kluczowa jest też praca nad własną stabilnością emocjonalną.",
+      "q4": "Czy splitting można całkowicie wyleczyć?",
+      "a4": "W przypadku BPD, splitting może być zmniejszony poprzez odpowiednią terapię (np. Dialektyczną Terapię Behawioralną - DBT), ale rzadko kiedy znika całkowicie. Osoba może jednak nauczyć się lepiej zarządzać tym mechanizmem oraz jego wpływem na relacje.",
+      "q5": "Jak dbać o siebie będąc w relacji z osobą doświadczającą splittingu?",
+      "a5": "Ustal jasne granice i ich przestrzegaj. Znajdź wsparcie (przyjaciele, rodzina, terapeuta). Pamiętaj, że nie jesteś odpowiedzialny/a za emocje drugiej osoby. Praktykuj techniki zarządzania stresem. Dbaj o swoje potrzeby i zdrowie psychiczne.",
+      "q6": "Czy ta aplikacja zastępuje profesjonalną pomoc psychologiczną?",
+      "a6": "Nie, ta aplikacja jest narzędziem edukacyjnym i wspierającym, ale nie zastępuje profesjonalnej pomocy psychologicznej. Jeśli doświadczasz poważnych trudności w relacji, warto skonsultować się z psychologiem lub psychoterapeutą."
+    },
+    "footer": {
+      "about": "O aplikacji",
+      "privacy": "Polityka prywatności",
+      "terms": "Warunki korzystania",
+      "contact": "Kontakt",
+      "tagline": "Tworzone z myślą o świadomym, empatycznym życiu. 💜"
+    }
+  }

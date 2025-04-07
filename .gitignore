@@ -1,0 +1,58 @@
+# Katalogi node
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Katalogi budowania i dystrybucji
+/dist/
+/build/
+/.output/
+.nuxt/
+
+# Lokalne pliki konfiguracyjne
+.env.local
+.env.*.local
+
+# Pliki systemowe
+.DS_Store
+Thumbs.db
+
+# Pliki edytorów
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.sublime-project
+*.sublime-workspace
+
+# Pliki logów
+logs
+*.log
+
+# Pliki tymczasowe
+.tmp/
+.temp/
+.cache/
+
+# Pliki z danymi testowymi
+/coverage/
+/cypress/videos/
+/cypress/screenshots/
+
+# Pliki specyficzne dla Vue
+.vue-sfc-temp/
+
+# Inne pliki które warto ignorować
+.eslintcache
+.stylelintcache
+.browserslistrc
+*.tgz
+.history/
+
+# Sekretny komentarz dla Kamila: powodzenia z projektem! 🦄

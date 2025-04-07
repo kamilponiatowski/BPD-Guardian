@@ -1,0 +1,112 @@
+{
+    "id": "quiz-module2",
+    "title": "Quiz: Techniki komunikacji",
+    "description": "Sprawdź swoją wiedzę na temat technik komunikacji w kontekście splittingu",
+    "passThreshold": 70,
+    "questions": [
+      {
+        "id": "q1",
+        "text": "Jakie są najważniejsze zasady komunikacji z osobą doświadczającą splittingu?",
+        "type": "multiple",
+        "options": [
+          { "id": "a", "text": "Zachowanie spokoju i kontrolowanie tonu głosu" },
+          { "id": "b", "text": "Walidacja uczuć, nawet jeśli nie zgadzasz się z interpretacją" },
+          { "id": "c", "text": "Używanie prostego i jasnego języka" },
+          { "id": "d", "text": "Natychmiastowe prostowanie fałszywych oskarżeń" }
+        ],
+        "correctAnswer": ["a", "b", "c"],
+        "explanation": "Kluczowe zasady to zachowanie spokoju, walidacja uczuć drugiej osoby oraz używanie prostego i jasnego języka. Natychmiastowe prostowanie fałszywych oskarżeń często prowadzi do eskalacji konfliktu, zamiast jego rozwiązania."
+      },
+      {
+        "id": "q2",
+        "text": "Co oznacza skrót SET w technice komunikacji?",
+        "type": "single",
+        "options": [
+          { "id": "a", "text": "Serious, Emotional, Truthful (Poważny, Emocjonalny, Prawdziwy)" },
+          { "id": "b", "text": "Support, Empathy, Truth (Wsparcie, Empatia, Prawda)" },
+          { "id": "c", "text": "Simple, Effective, Tactful (Prosty, Efektywny, Taktowny)" },
+          { "id": "d", "text": "Specific, Explanatory, Thoughtful (Konkretny, Wyjaśniający, Przemyślany)" }
+        ],
+        "correctAnswer": "b",
+        "explanation": "SET to akronim od Support (Wsparcie), Empathy (Empatia), Truth (Prawda). Ta technika pomaga w wyrażaniu myśli i uczuć w sposób jasny i empatyczny, jednocześnie stawiając zdrowe granice."
+      },
+      {
+        "id": "q3",
+        "text": "Które z poniższych jest przykładem pierwszego elementu techniki SET (Support)?",
+        "type": "single",
+        "options": [
+          { "id": "a", "text": "\"Widzę, że cierpisz\"" },
+          { "id": "b", "text": "\"Zależy mi na tobie\"" },
+          { "id": "c", "text": "\"Potrzebuję chwili na uspokojenie się\"" },
+          { "id": "d", "text": "\"Rozumiem, że to dla ciebie trudne\"" }
+        ],
+        "correctAnswer": "b",
+        "explanation": "\"Zależy mi na tobie\" jest przykładem elementu Support (Wsparcie), który wyraża troskę i wsparcie dla drugiej osoby. \"Widzę, że cierpisz\" i \"Rozumiem, że to dla ciebie trudne\" są przykładami Empathy (Empatii), a \"Potrzebuję chwili na uspokojenie się\" to przykład Truth (Prawdy)."
+      },
+      {
+        "id": "q4",
+        "text": "Jakie są trzy warstwy \"kanapki komunikacyjnej\"?",
+        "type": "multiple",
+        "options": [
+          { "id": "a", "text": "Empatia lub zrozumienie dla uczuć drugiej osoby" },
+          { "id": "b", "text": "Jasno postawiona granica lub trudna informacja" },
+          { "id": "c", "text": "Propozycja rozwiązania lub konstruktywnej alternatywy" },
+          { "id": "d", "text": "Wyjaśnienie dlaczego druga osoba nie ma racji" }
+        ],
+        "correctAnswer": ["a", "b", "c"],
+        "explanation": "\"Kanapka komunikacyjna\" składa się z trzech warstw: empatii lub zrozumienia dla uczuć drugiej osoby, jasno postawionej granicy lub trudnej informacji oraz propozycji rozwiązania lub konstruktywnej alternatywy. Wyjaśnianie, dlaczego druga osoba nie ma racji, nie jest częścią tej techniki i może prowadzić do eskalacji konfliktu."
+      },
+      {
+        "id": "q5",
+        "text": "Który z poniższych przykładów jest prawidłowym zastosowaniem \"kanapki komunikacyjnej\"?",
+        "type": "single",
+        "options": [
+          { "id": "a", "text": "\"Naprawdę nie znoszę, kiedy mnie ignorujesz. To jest niedopuszczalne. Musisz to zmienić albo będziemy mieli problem.\"" },
+          { "id": "b", "text": "\"Wiem, że chcesz spędzić ze mną czas i cenię to. Potrzebuję teraz dwóch godzin nieprzerywanej pracy. Co powiesz na to, żebyśmy po tych dwóch godzinach zrobili sobie przerwę i wspólnie zjedli obiad?\"" },
+          { "id": "c", "text": "\"Muszę pracować. Nie przeszkadzaj mi. Pogadamy później.\"" },
+          { "id": "d", "text": "\"Dlaczego zawsze mi przeszkadzasz, gdy pracuję? Czy nie widzisz, że jestem zajęty? Może mógłbyś zająć się czymś innym?\"" }
+        ],
+        "correctAnswer": "b",
+        "explanation": "Przykład B jest prawidłowym zastosowaniem \"kanapki komunikacyjnej\": zaczyna od empatii (\"Wiem, że chcesz spędzić ze mną czas i cenię to\"), potem stawia granicę (\"Potrzebuję teraz dwóch godzin nieprzerywanej pracy\") i kończy propozycją alternatywy (\"Co powiesz na to, żebyśmy po tych dwóch godzinach zrobili sobie przerwę i wspólnie zjedli obiad?\")."
+      },
+      {
+        "id": "q6",
+        "text": "Jaka jest główna różnica między techniką SET a kanapką komunikacyjną?",
+        "type": "single",
+        "options": [
+          { "id": "a", "text": "SET jest stosowana w sytuacjach konfliktowych, a kanapka komunikacyjna w codziennych rozmowach" },
+          { "id": "b", "text": "SET skupia się na wyrażaniu wsparcia, empatii i prawdy, a kanapka komunikacyjna na stawianiu granic z propozycją alternatywy" },
+          { "id": "c", "text": "SET jest techniką bardziej skomplikowaną i trudniejszą do zastosowania" },
+          { "id": "d", "text": "Nie ma między nimi istotnych różnic, są to różne nazwy tej samej techniki" }
+        ],
+        "correctAnswer": "b",
+        "explanation": "Główna różnica polega na tym, że SET (Support, Empathy, Truth) skupia się na wyrażaniu wsparcia, empatii i prawdy w sposób empatyczny, podczas gdy kanapka komunikacyjna koncentruje się na stawianiu granic z jednoczesnym oferowaniem alternatywy, umieszczając trudny komunikat między empatią a konstruktywną propozycją."
+      },
+      {
+        "id": "q7",
+        "text": "Co jest kluczowe, aby kanapka komunikacyjna była skuteczna?",
+        "type": "multiple",
+        "options": [
+          { "id": "a", "text": "Szczerość i autentyczność w wyrażaniu empatii" },
+          { "id": "b", "text": "Jasne i konkretne stawianie granic" },
+          { "id": "c", "text": "Proponowanie realistycznych alternatyw" },
+          { "id": "d", "text": "Używanie jak najbardziej skomplikowanego języka, aby zaimponować rozmówcy" }
+        ],
+        "correctAnswer": ["a", "b", "c"],
+        "explanation": "Aby kanapka komunikacyjna była skuteczna, kluczowa jest szczerość i autentyczność w wyrażaniu empatii, jasne i konkretne stawianie granic oraz proponowanie realistycznych alternatyw. Używanie skomplikowanego języka może utrudnić komunikację, szczególnie w sytuacjach emocjonalnych."
+      },
+      {
+        "id": "q8",
+        "text": "Która z poniższych technik jest najlepszą reakcją, gdy partner w trakcie splittingu oskarża Cię o coś, czego nie zrobiłeś?",
+        "type": "single",
+        "options": [
+          { "id": "a", "text": "Natychmiastowe i szczegółowe wyjaśnienie faktów, aby wyprostować nieporozumienie" },
+          { "id": "b", "text": "Ignorowanie oskarżeń i zmiana tematu" },
+          { "id": "c", "text": "Walidacja uczuć partnera, zachowanie spokoju i nieakceptowanie fałszywych oskarżeń" },
+          { "id": "d", "text": "Kontratak z własnymi oskarżeniami, aby partner zrozumiał, jak się czujesz" }
+        ],
+        "correctAnswer": "c",
+        "explanation": "Walidacja uczuć partnera, zachowanie spokoju i nieakceptowanie fałszywych oskarżeń to najlepsza reakcja. Natychmiastowe wyjaśnianie faktów może być odebrane jako obrona lub zaprzeczanie uczuciom partnera, ignorowanie może pogłębić poczucie krzywdy, a kontratak prowadzi do eskalacji konfliktu."
+      }
+    ]
+  }

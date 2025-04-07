@@ -1,0 +1,71 @@
+:root {
+    /* Colors */
+    --color-primary: #7759de;
+    --color-primary-light: #e8e1fa;
+    --color-primary-light-hover: #dcd1f7;
+    --color-primary-dark: #5c3ec2;
+    --color-primary-hover: #6c50d2;
+    
+    --color-text: #333333;
+    --color-text-light: #666666;
+    
+    --color-background: #f8f9fa;
+    --color-background-alt: #f0f2f5;
+    --color-white: #ffffff;
+    
+    --color-border: #e0e0e0;
+    
+    --color-success: #4caf50;
+    --color-success-light: #e8f5e9;
+    
+    --color-warning: #ff9800;
+    --color-warning-light: #fff8e1;
+    
+    --color-error: #f44336;
+    --color-error-light: #ffebee;
+    
+    --color-info: #2196f3;
+    --color-info-light: #e3f2fd;
+  
+    /* Fonts */
+    --font-primary: 'Nunito', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --font-secondary: 'Poppins', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --font-monospace: 'Fira Code', 'Courier New', Courier, monospace;
+  
+    /* Spacing */
+    --spacing-xs: 0.4rem;
+    --spacing-sm: 0.8rem;
+    --spacing-md: 1.6rem;
+    --spacing-lg: 2.4rem;
+    --spacing-xl: 3.2rem;
+    --spacing-xxl: 4.8rem;
+  
+    /* Borders */
+    --border-radius: 0.8rem;
+    --border-radius-sm: 0.4rem;
+    --border-radius-lg: 1.2rem;
+  
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.15);
+  
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-default: 0.3s ease;
+    --transition-slow: 0.5s ease;
+  
+    /* Z-index layers */
+    --z-index-dropdown: 100;
+    --z-index-sticky: 200;
+    --z-index-fixed: 300;
+    --z-index-modal-backdrop: 400;
+    --z-index-modal: 500;
+    --z-index-popover: 600;
+    --z-index-tooltip: 700;
+  
+    /* Other constants */
+    --max-width-container: 120rem;
+    --header-height: 6rem;
+  }

@@ -1,0 +1,18 @@
+{
+    "quizzes": [
+      {
+        "id": "quiz-module1",
+        "moduleId": "module1",
+        "title": "Quiz: Zrozumienie splittingu",
+        "description": "Sprawdź swoją wiedzę na temat splittingu",
+        "passThreshold": 70
+      },
+      {
+        "id": "quiz-module2",
+        "moduleId": "module2",
+        "title": "Quiz: Techniki komunikacji",
+        "description": "Sprawdź swoją wiedzę na temat technik komunikacji w kontekście splittingu",
+        "passThreshold": 70
+      }
+    ]
+  }

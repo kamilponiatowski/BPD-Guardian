@@ -1,0 +1,234 @@
+/* Typography Styles */
+
+/* Base Font Styles */
+body {
+    font-family: var(--font-primary);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: var(--color-text);
+  }
+  
+  /* Headings */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: var(--color-text);
+  }
+  
+  h1 {
+    font-size: 3.2rem;
+  }
+  
+  h2 {
+    font-size: 2.8rem;
+  }
+  
+  h3 {
+    font-size: 2.4rem;
+  }
+  
+  h4 {
+    font-size: 2rem;
+  }
+  
+  h5 {
+    font-size: 1.8rem;
+  }
+  
+  h6 {
+    font-size: 1.6rem;
+  }
+  
+  /* Paragraphs */
+  p {
+    margin-bottom: 1.6rem;
+  }
+  
+  /* Links */
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition-default);
+  }
+  
+  a:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+  }
+  
+  /* Lists */
+  ul, ol {
+    margin-bottom: 1.6rem;
+    padding-left: 2.4rem;
+  }
+  
+  ul li, ol li {
+    margin-bottom: 0.8rem;
+  }
+  
+  /* Emphasis */
+  strong, b {
+    font-weight: 700;
+  }
+  
+  em, i {
+    font-style: italic;
+  }
+  
+  /* Text Utilities */
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-right {
+    text-align: right;
+  }
+  
+  .text-left {
+    text-align: left;
+  }
+  
+  .text-justify {
+    text-align: justify;
+  }
+  
+  .text-uppercase {
+    text-transform: uppercase;
+  }
+  
+  .text-lowercase {
+    text-transform: lowercase;
+  }
+  
+  .text-capitalize {
+    text-transform: capitalize;
+  }
+  
+  .text-primary {
+    color: var(--color-primary);
+  }
+  
+  .text-muted {
+    color: var(--color-text-light);
+  }
+  
+  .text-success {
+    color: var(--color-success);
+  }
+  
+  .text-warning {
+    color: var(--color-warning);
+  }
+  
+  .text-error {
+    color: var(--color-error);
+  }
+  
+  .text-info {
+    color: var(--color-info);
+  }
+  
+  .text-small {
+    font-size: 1.4rem;
+  }
+  
+  .text-large {
+    font-size: 1.8rem;
+  }
+  
+  .text-xlarge {
+    font-size: 2.4rem;
+  }
+  
+  .text-bold {
+    font-weight: 700;
+  }
+  
+  .text-normal {
+    font-weight: 400;
+  }
+  
+  .text-light {
+    font-weight: 300;
+  }
+  
+  /* Code & Monospace */
+  code, pre {
+    font-family: var(--font-monospace);
+    font-size: 1.4rem;
+    background-color: var(--color-background-alt);
+    border-radius: var(--border-radius-sm);
+  }
+  
+  code {
+    padding: 0.2rem 0.4rem;
+  }
+  
+  pre {
+    padding: 1.6rem;
+    margin-bottom: 1.6rem;
+    overflow-x: auto;
+    white-space: pre-wrap;
+  }
+  
+  /* Blockquotes */
+  blockquote {
+    padding: 1.6rem;
+    margin-bottom: 1.6rem;
+    border-left: 0.4rem solid var(--color-primary-light);
+    background-color: var(--color-background-alt);
+  }
+  
+  blockquote p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Horizontal Rule */
+  hr {
+    margin: 2.4rem 0;
+    border: none;
+    border-top: 1px solid var(--color-border);
+  }
+  
+  /* Responsive Typography */
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 2.8rem;
+    }
+    
+    h2 {
+      font-size: 2.4rem;
+    }
+    
+    h3 {
+      font-size: 2rem;
+    }
+    
+    h4 {
+      font-size: 1.8rem;
+    }
+    
+    h5, h6 {
+      font-size: 1.6rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    h1 {
+      font-size: 2.4rem;
+    }
+    
+    h2 {
+      font-size: 2.2rem;
+    }
+    
+    h3 {
+      font-size: 1.8rem;
+    }
+    
+    body {
+      font-size: 1.5rem;
+    }
+  }

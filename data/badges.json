@@ -1,0 +1,168 @@
+[
+    {
+      "id": "first-steps",
+      "type": "special",
+      "name": "Pierwsze kroki",
+      "description": "Ukończ pierwszą lekcję",
+      "icon": "👣",
+      "points": 10
+    },
+    {
+      "id": "first-quiz",
+      "type": "special",
+      "name": "Pierwszy test",
+      "description": "Ukończ pierwszy quiz",
+      "icon": "📝",
+      "points": 20
+    },
+    {
+      "id": "module-module1-completed",
+      "type": "module",
+      "name": "Znawca splittingu",
+      "description": "Ukończ moduł \"Zrozumienie splittingu\"",
+      "icon": "🧠",
+      "points": 50,
+      "requirement": {
+        "moduleId": "module1"
+      }
+    },
+    {
+      "id": "module-module2-completed",
+      "type": "module",
+      "name": "Mistrz komunikacji",
+      "description": "Ukończ moduł \"Techniki komunikacji\"",
+      "icon": "💬",
+      "points": 50,
+      "requirement": {
+        "moduleId": "module2"
+      }
+    },
+    {
+      "id": "quiz-module1-perfect",
+      "type": "quiz",
+      "name": "Perfekcyjna wiedza: Splitting",
+      "description": "Uzyskaj 100% w quizie z modułu \"Zrozumienie splittingu\"",
+      "icon": "🏅",
+      "points": 30,
+      "requirement": {
+        "quizId": "quiz-module1",
+        "score": 100
+      }
+    },
+    {
+      "id": "quiz-module2-perfect",
+      "type": "quiz",
+      "name": "Perfekcyjna wiedza: Komunikacja",
+      "description": "Uzyskaj 100% w quizie z modułu \"Techniki komunikacji\"",
+      "icon": "🏅",
+      "points": 30,
+      "requirement": {
+        "quizId": "quiz-module2",
+        "score": 100
+      }
+    },
+    {
+      "id": "quiz-all-perfect",
+      "type": "quiz",
+      "name": "Mistrz quizów",
+      "description": "Uzyskaj 100% we wszystkich quizach",
+      "icon": "🏆",
+      "points": 100,
+      "requirement": {
+        "allQuizzes": true,
+        "score": 100
+      }
+    },
+    {
+      "id": "points-100",
+      "type": "points",
+      "name": "Początkujący",
+      "description": "Zdobądź 100 punktów",
+      "icon": "🌱",
+      "points": 10,
+      "requirement": 100
+    },
+    {
+      "id": "points-250",
+      "type": "points",
+      "name": "Odkrywca",
+      "description": "Zdobądź 250 punktów",
+      "icon": "🔍",
+      "points": 15,
+      "requirement": 250
+    },
+    {
+      "id": "points-500",
+      "type": "points",
+      "name": "Doświadczony",
+      "description": "Zdobądź 500 punktów",
+      "icon": "🌿",
+      "points": 25,
+      "requirement": 500
+    },
+    {
+      "id": "points-1000",
+      "type": "points",
+      "name": "Ekspert",
+      "description": "Zdobądź 1000 punktów",
+      "icon": "🌳",
+      "points": 50,
+      "requirement": 1000
+    },
+    {
+      "id": "streak-3",
+      "type": "streak",
+      "name": "3 dni z rzędu",
+      "description": "Korzystaj z aplikacji przez 3 dni z rzędu",
+      "icon": "🔥",
+      "points": 15,
+      "requirement": {
+        "days": 3
+      }
+    },
+    {
+      "id": "streak-7",
+      "type": "streak",
+      "name": "Tygodniowa passa",
+      "description": "Korzystaj z aplikacji przez 7 dni z rzędu",
+      "icon": "🔥🔥",
+      "points": 30,
+      "requirement": {
+        "days": 7
+      }
+    },
+    {
+      "id": "streak-14",
+      "type": "streak",
+      "name": "Niezłomny",
+      "description": "Korzystaj z aplikacji przez 14 dni z rzędu",
+      "icon": "🔥🔥🔥",
+      "points": 50,
+      "requirement": {
+        "days": 14
+      }
+    },
+    {
+      "id": "all-modules-completed",
+      "type": "module",
+      "name": "Kurs ukończony",
+      "description": "Ukończ wszystkie moduły edukacyjne",
+      "icon": "🎓",
+      "points": 100,
+      "requirement": {
+        "all": true
+      }
+    },
+    {
+      "id": "all-modules-perfect",
+      "type": "module",
+      "name": "Perfekcjonista",
+      "description": "Ukończ wszystkie moduły z najwyższym wynikiem we wszystkich quizach",
+      "icon": "✨",
+      "points": 150,
+      "requirement": {
+        "all": true,
+        "perfectQuizzes": true
+      }
+    }
+  ]

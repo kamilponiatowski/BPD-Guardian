@@ -1,0 +1,317 @@
+/* Cards & Content Blocks Styles */
+
+/* Module Card */
+.module-card {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    padding: 2.5rem;
+    transition: all var(--transition-default);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .module-card:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .module-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .module-card__number {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-text-light);
+  }
+  
+  .module-card__progress {
+    width: 10rem;
+    height: 0.8rem;
+    background-color: var(--color-background-alt);
+    border-radius: 10rem;
+    overflow: hidden;
+  }
+  
+  .module-card__progress-bar {
+    height: 100%;
+    background-color: var(--color-success);
+    border-radius: 10rem;
+    width: 0%;
+    transition: width var(--transition-default);
+  }
+  
+  .module-card__title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+  }
+  
+  .module-card__desc {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    color: var(--color-text-light);
+  }
+  
+  .module-card__lessons {
+    margin-bottom: 2.5rem;
+    flex-grow: 1;
+  }
+  
+  .module-card__lesson {
+    position: relative;
+    padding-left: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: var(--color-text);
+  }
+  
+  .module-card__lesson::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.7rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background-color: var(--color-primary-light);
+  }
+  
+  .module-card__cta {
+    align-self: flex-start;
+    margin-bottom: 2rem;
+  }
+  
+  .module-card__badges {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .module-card--completed .module-card__progress-bar {
+    width: 100%;
+  }
+  
+  .module-card--completed .module-card__title::after {
+    content: '✓';
+    display: inline-block;
+    margin-left: 1rem;
+    color: var(--color-success);
+  }
+  
+  /* Lesson Content Blocks */
+  .lesson__title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 3rem;
+  }
+  
+  .lesson__content {
+    font-size: 1.7rem;
+    line-height: 1.6;
+  }
+  
+  .lesson__content h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 3rem 0 1.5rem;
+  }
+  
+  .lesson__content p {
+    margin-bottom: 2rem;
+  }
+  
+  .lesson__content ul,
+  .lesson__content ol {
+    margin-bottom: 2rem;
+    padding-left: 2.5rem;
+  }
+  
+  .lesson__content li {
+    margin-bottom: 1rem;
+  }
+  
+  /* Content Block Types */
+  .content-block {
+    margin-bottom: 3rem;
+  }
+  
+  /* Tip Block */
+  .content-block--tip,
+  .tip {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    background-color: var(--color-primary-light);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .tip__icon {
+    font-size: 2.4rem;
+    flex-shrink: 0;
+  }
+  
+  .tip__content {
+    flex-grow: 1;
+  }
+  
+  .tip__content p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Example Block */
+  .content-block--example,
+  .example {
+    background-color: var(--color-background-alt);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .example__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+  }
+  
+  .example__content {
+    color: var(--color-text);
+  }
+  
+  .example__content p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Table Block */
+  .content-block--table table,
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2.5rem;
+  }
+  
+  caption {
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+  }
+  
+  th, td {
+    border: 1px solid var(--color-border);
+    padding: 1.2rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  
+  th {
+    background-color: var(--color-primary-light);
+    font-weight: 600;
+    color: var(--color-primary-dark);
+  }
+  
+  tr:nth-child(even) td {
+    background-color: var(--color-background-alt);
+  }
+  
+  /* Figure Block */
+  figure {
+    margin: 0 0 2.5rem;
+  }
+  
+  figure img {
+    width: 100%;
+    border-radius: var(--border-radius);
+  }
+  
+  figcaption {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: var(--color-text-light);
+    text-align: center;
+  }
+  
+  /* Module Progress Item */
+  .module-progress-item {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .module-progress-item__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .module-progress-item__title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 0;
+  }
+  
+  .module-progress-item__percentage {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+  
+  .module-progress-item__progress {
+    height: 1rem;
+    background-color: var(--color-background-alt);
+    border-radius: 10rem;
+    overflow: hidden;
+  }
+  
+  .module-progress-item__progress-bar {
+    height: 100%;
+    background-color: var(--color-success);
+    border-radius: 10rem;
+    transition: width var(--transition-default);
+  }
+  
+  /* Benefits */
+  .benefit {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-default);
+  }
+  
+  .benefit:hover {
+    transform: translateY(-0.5rem);
+  }
+  
+  .benefit__icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .benefit__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+  }
+  
+  .benefit__desc {
+    font-size: 1.6rem;
+    color: var(--color-text-light);
+  }

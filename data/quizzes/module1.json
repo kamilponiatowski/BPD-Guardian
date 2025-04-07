@@ -1,0 +1,112 @@
+{
+    "id": "quiz-module1",
+    "title": "Quiz: Zrozumienie splittingu",
+    "description": "Sprawdź swoją wiedzę na temat splittingu",
+    "passThreshold": 70,
+    "questions": [
+      {
+        "id": "q1",
+        "text": "Czym jest splitting?",
+        "type": "single",
+        "options": [
+          { "id": "a", "text": "Technika terapeutyczna stosowana w leczeniu BPD" },
+          { "id": "b", "text": "Mechanizm obronny polegający na postrzeganiu ludzi i sytuacji w kategoriach czarno-białych" },
+          { "id": "c", "text": "Świadoma manipulacja stosowana przez osoby z BPD" },
+          { "id": "d", "text": "Rodzaj terapii grupowej" }
+        ],
+        "correctAnswer": "b",
+        "explanation": "Splitting to mechanizm obronny, w którym osoba postrzega ludzi i sytuacje jako całkowicie dobre lub złe, bez odcieni szarości. Nie jest to świadoma manipulacja ani technika terapeutyczna."
+      },
+      {
+        "id": "q2",
+        "text": "Które z poniższych są objawami splittingu? (wybierz wszystkie poprawne odpowiedzi)",
+        "type": "multiple",
+        "options": [
+          { "id": "a", "text": "Impulsywne zachowania (np. wysyłanie obraźliwych wiadomości)" },
+          { "id": "b", "text": "Bezpodstawne oskarżenia i przypisywanie złych intencji" },
+          { "id": "c", "text": "Nadinterpretacje i dopatrywanie się ukrytych znaczeń" },
+          { "id": "d", "text": "Systematyczne planowanie długoterminowych celów" }
+        ],
+        "correctAnswer": ["a", "b", "c"],
+        "explanation": "Impulsywne zachowania, bezpodstawne oskarżenia i nadinterpretacje są typowymi objawami splittingu. Systematyczne planowanie długoterminowych celów nie jest objawem splittingu, wręcz przeciwnie - splitting często prowadzi do impulsywności i trudności w planowaniu."
+      },
+      {
+        "id": "q3",
+        "text": "Co może wywołać splitting u osoby z BPD?",
+        "type": "multiple",
+        "options": [
+          { "id": "a", "text": "Poczucie odrzucenia lub zaniedbania" },
+          { "id": "b", "text": "Krytyka lub postrzegane zagrożenie dla relacji" },
+          { "id": "c", "text": "Silny stres lub przemęczenie" },
+          { "id": "d", "text": "Regularna praktyka medytacji" }
+        ],
+        "correctAnswer": ["a", "b", "c"],
+        "explanation": "Splitting może być wywołany przez poczucie odrzucenia, krytykę lub zagrożenie dla relacji, a także przez silny stres. Regularna praktyka medytacji zazwyczaj pomaga w regulacji emocji i nie wywołuje splittingu."
+      },
+      {
+        "id": "q4",
+        "text": "Jakie są charakterystyczne cechy komunikacji podczas splittingu?",
+        "type": "multiple",
+        "options": [
+          { "id": "a", "text": "Używanie słów \"zawsze\" i \"nigdy\"" },
+          { "id": "b", "text": "Nagłe zmiany z czułości do wrogości" },
+          { "id": "c", "text": "Blokowanie kontaktu bez wyraźnego powodu" },
+          { "id": "d", "text": "Spokojne wyrażanie swoich potrzeb i uczuć" }
+        ],
+        "correctAnswer": ["a", "b", "c"],
+        "explanation": "Podczas splittingu komunikacja często charakteryzuje się używaniem absolutnych stwierdzeń (\"zawsze\", \"nigdy\"), nagłymi zmianami nastroju i zachowania oraz blokowaniem kontaktu. Spokojne wyrażanie potrzeb i uczuć jest przeciwieństwem komunikacji podczas splittingu."
+      },
+      {
+        "id": "q5",
+        "text": "Które z poniższych stwierdzeń na temat błędnego koła splittingu jest prawdziwe?",
+        "type": "single",
+        "options": [
+          { "id": "a", "text": "Błędne koło splittingu zawsze prowadzi do zakończenia relacji" },
+          { "id": "b", "text": "Obrona i wyjaśnianie są najlepszym sposobem przerwania błędnego koła" },
+          { "id": "c", "text": "Błędne koło splittingu może się samopodtrzymywać i prowadzić do eskalacji konfliktów" },
+          { "id": "d", "text": "Błędne koło splittingu dotyka tylko osoby z zaburzeniami osobowości" }
+        ],
+        "correctAnswer": "c",
+        "explanation": "Błędne koło splittingu może się samopodtrzymywać i prowadzić do eskalacji konfliktów, jeśli nie zostanie przerwane. Nie zawsze prowadzi do zakończenia relacji, a obrona i wyjaśnianie często tylko pogarszają sytuację, gdyż mogą być odbierane jako atak."
+      },
+      {
+        "id": "q6",
+        "text": "Jaka jest najlepsza reakcja, gdy partner doświadcza splittingu?",
+        "type": "single",
+        "options": [
+          { "id": "a", "text": "Przekonać go, że jego postrzeganie jest błędne, przedstawiając fakty" },
+          { "id": "b", "text": "Ignorować go, dopóki się nie uspokoi" },
+          { "id": "c", "text": "Zachować spokój, zwalidować uczucia partnera, ale nie zgadzać się z oskarżeniami" },
+          { "id": "d", "text": "Odpowiedzieć równie emocjonalnie, aby partner zrozumiał, jak się czujesz" }
+        ],
+        "correctAnswer": "c",
+        "explanation": "Zachowanie spokoju, walidacja uczuć partnera przy jednoczesnym nieakceptowaniu fałszywych oskarżeń to najlepsza strategia radzenia sobie ze splittingiem. Próby przekonywania lub ignorowanie mogą pogorszyć sytuację, a odpowiadanie równie emocjonalnie prowadzi do eskalacji konfliktu."
+      },
+      {
+        "id": "q7",
+        "text": "Czy splitting jest świadomą manipulacją?",
+        "type": "single",
+        "options": [
+          { "id": "a", "text": "Tak, osoba zawsze świadomie stosuje splitting, by manipulować partnerem" },
+          { "id": "b", "text": "Nie, to nieświadomy mechanizm obronny, który chroni przed lękiem i bólem emocjonalnym" },
+          { "id": "c", "text": "Czasami jest świadomy, a czasami nie, zależy od intencji osoby" },
+          { "id": "d", "text": "To zależy od stopnia zaawansowania BPD" }
+        ],
+        "correctAnswer": "b",
+        "explanation": "Splitting nie jest świadomą manipulacją, ale nieświadomym mechanizmem obronnym, który osoba stosuje, aby chronić się przed lękiem i bólem emocjonalnym. Zrozumienie tego jest kluczowe dla empatycznego podejścia do osoby doświadczającej splittingu."
+      },
+      {
+        "id": "q8",
+        "text": "Jak splitting wpływa na stabilność relacji?",
+        "type": "single",
+        "options": [
+          { "id": "a", "text": "Nie ma wpływu na stabilność relacji" },
+          { "id": "b", "text": "Zawsze prowadzi do natychmiastowego zakończenia relacji" },
+          { "id": "c", "text": "Może prowadzić do cykli zbliżania się i oddalania, tworząc niestabilność" },
+          { "id": "d", "text": "Zazwyczaj stabilizuje relację, ponieważ wyjaśnia nieporozumienia" }
+        ],
+        "correctAnswer": "c",
+        "explanation": "Splitting może prowadzić do cykli zbliżania się i oddalania w relacji, powodując niestabilność. W fazie idealizacji partner jest postrzegany jako doskonały, a w fazie dewaluacji jako zły, co prowadzi do emocjonalnych wzlotów i upadków."
+      }
+    ]
+  }

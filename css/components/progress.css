@@ -1,0 +1,287 @@
+/* Progress Components Styles */
+
+/* Progress Dashboard */
+.progress-dashboard {
+    margin-bottom: 4rem;
+  }
+  
+  /* Progress Summary */
+  .progress-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+  }
+  
+  .progress-summary__item {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: 3rem;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-default);
+  }
+  
+  .progress-summary__item:hover {
+    transform: translateY(-0.5rem);
+  }
+  
+  .progress-summary__value {
+    font-size: 4.8rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    line-height: 1;
+  }
+  
+  .progress-summary__label {
+    font-size: 1.8rem;
+    color: var(--color-text-light);
+  }
+  
+  /* Modules Progress */
+  .modules-progress {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: 3rem;
+    box-shadow: var(--shadow-md);
+  }
+  
+  .modules-progress__title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 3rem;
+  }
+  
+  .modules-progress__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .module-progress-item__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .module-progress-item__title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 0;
+  }
+  
+  .module-progress-item__percentage {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+  
+  .module-progress-item__progress {
+    height: 1rem;
+    background-color: var(--color-background-alt);
+    border-radius: 10rem;
+    overflow: hidden;
+  }
+  
+  .module-progress-item__progress-bar {
+    height: 100%;
+    background-color: var(--color-success);
+    border-radius: 10rem;
+    transition: width var(--transition-default);
+  }
+  
+  /* Stats Grid */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+  }
+  
+  .stats-card {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-md);
+  }
+  
+  .stats-card__title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 2rem;
+  }
+  
+  /* Activity Calendar */
+  .activity-calendar {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: 3rem;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 4rem;
+  }
+  
+  .activity-calendar__title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 2.5rem;
+  }
+  
+  .activity-calendar__grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .activity-calendar__day {
+    position: relative;
+    aspect-ratio: 1;
+    background-color: var(--color-background-alt);
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: all var(--transition-default);
+  }
+  
+  .activity-calendar__day:hover {
+    transform: scale(1.1);
+  }
+  
+  .activity-calendar__day::before {
+    content: attr(data-date);
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    font-size: 1rem;
+    color: var(--color-text-light);
+  }
+  
+  .activity-calendar__day--active {
+    background-color: var(--color-primary-light);
+  }
+  
+  .activity-calendar__day--active-1 {
+    background-color: #E3F2FD;
+  }
+  
+  .activity-calendar__day--active-2 {
+    background-color: #BBDEFB;
+  }
+  
+  .activity-calendar__day--active-3 {
+    background-color: #90CAF9;
+  }
+  
+  .activity-calendar__day--active-4 {
+    background-color: #64B5F6;
+  }
+  
+  .activity-calendar__day--active-5 {
+    background-color: #42A5F5;
+  }
+  
+  .activity-calendar__legend {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2.5rem;
+    justify-content: center;
+  }
+  
+  .activity-calendar__legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.4rem;
+    color: var(--color-text-light);
+  }
+  
+  .activity-calendar__legend-color {
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: var(--border-radius-sm);
+  }
+  
+  /* Streak Display */
+  .streak-display {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  .streak-display__flames {
+    display: flex;
+    align-items: center;
+  }
+  
+  .streak-display__flame {
+    font-size: 2.4rem;
+  }
+  
+  .streak-display__count {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+  
+  .streak-display__label {
+    font-size: 1.7rem;
+    color: var(--color-text-light);
+  }
+  
+  /* Progress Chart */
+  .progress-chart {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: 3rem;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 4rem;
+  }
+  
+  .progress-chart__title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 2.5rem;
+  }
+  
+  .progress-chart__container {
+    height: 30rem;
+    position: relative;
+  }
+  
+  /* Progress Tooltip */
+  .progress-tooltip {
+    position: absolute;
+    background-color: var(--color-text);
+    color: var(--color-white);
+    padding: 1rem 1.5rem;
+    border-radius: var(--border-radius-sm);
+    font-size: 1.4rem;
+    pointer-events: none;
+    z-index: 100;
+    box-shadow: var(--shadow-md);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity var(--transition-default);
+  }
+  
+  .progress-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 0.5rem;
+    border-style: solid;
+    border-color: var(--color-text) transparent transparent transparent;
+  }
+  
+  .progress-tooltip--visible {
+    opacity: 1;
+  }
