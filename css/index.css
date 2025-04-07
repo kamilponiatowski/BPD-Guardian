@@ -1,0 +1,14 @@
+/* Base Styles */
+@import './utils/variables.css';
+@import './utils/typography.css';
+@import './utils/accessibility.css';
+
+/* Components */
+@import './components/navigation.css';
+@import './components/quiz.css';
+@import './components/badges.css';
+@import './components/progress.css';
+@import './components/cards.css';
+
+/* Main Styles */
+@import './main.css';

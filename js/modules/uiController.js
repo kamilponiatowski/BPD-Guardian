@@ -564,102 +564,106 @@ export class UIController {
     blockElement.className = `content-block content-block--${block.type}`;
 
     switch (block.type) {
-      case 'text':
-        blockElement.innerHTML = block.content;
-        break;
+    case 'text':
+      blockElement.innerHTML = block.content;
+      break;
 
-      case 'image':
-        const img = document.createElement('img');
-        img.src = block.src;
-        img.alt = block.alt || '';
+    case 'image': {
+      const img = document.createElement('img');
+      img.src = block.src;
+      img.alt = block.alt || '';
 
-        if (block.caption) {
-          const figure = document.createElement('figure');
-          figure.appendChild(img);
+      if (block.caption) {
+        const figure = document.createElement('figure');
+        figure.appendChild(img);
 
-          const figcaption = document.createElement('figcaption');
-          figcaption.textContent = block.caption;
+        const figcaption = document.createElement('figcaption');
+        figcaption.textContent = block.caption;
 
-          figure.appendChild(figcaption);
-          blockElement.appendChild(figure);
-        } else {
-          blockElement.appendChild(img);
-        }
-        break;
+        figure.appendChild(figcaption);
+        blockElement.appendChild(figure);
+      } else {
+        blockElement.appendChild(img);
+      }
+      break;
+    }
 
-      case 'tip':
-        const tipIcon = document.createElement('div');
-        tipIcon.className = 'tip__icon';
-        tipIcon.textContent = block.icon || '💡';
+    case 'tip': {
+      const tipIcon = document.createElement('div');
+      tipIcon.className = 'tip__icon';
+      tipIcon.textContent = block.icon || '💡';
 
-        const tipContent = document.createElement('div');
-        tipContent.className = 'tip__content';
-        tipContent.innerHTML = block.content;
+      const tipContent = document.createElement('div');
+      tipContent.className = 'tip__content';
+      tipContent.innerHTML = block.content;
 
-        blockElement.appendChild(tipIcon);
-        blockElement.appendChild(tipContent);
-        break;
+      blockElement.appendChild(tipIcon);
+      blockElement.appendChild(tipContent);
+      break;
+    }
 
-      case 'example':
-        const exampleTitle = document.createElement('h3');
-        exampleTitle.className = 'example__title';
-        exampleTitle.textContent = block.title || t('module.example');
+    case 'example': {
+      const exampleTitle = document.createElement('h3');
+      exampleTitle.className = 'example__title';
+      exampleTitle.textContent = block.title || t('module.example');
 
-        const exampleContent = document.createElement('div');
-        exampleContent.className = 'example__content';
-        exampleContent.innerHTML = block.content;
+      const exampleContent = document.createElement('div');
+      exampleContent.className = 'example__content';
+      exampleContent.innerHTML = block.content;
 
-        blockElement.appendChild(exampleTitle);
-        blockElement.appendChild(exampleContent);
-        break;
+      blockElement.appendChild(exampleTitle);
+      blockElement.appendChild(exampleContent);
+      break;
+    }
 
-      case 'table':
-        const table = document.createElement('table');
+    case 'table': {
+      const table = document.createElement('table');
 
-        // Add caption if provided
-        if (block.caption) {
-          const caption = document.createElement('caption');
-          caption.textContent = block.caption;
-          table.appendChild(caption);
-        }
+      // Add caption if provided
+      if (block.caption) {
+        const caption = document.createElement('caption');
+        caption.textContent = block.caption;
+        table.appendChild(caption);
+      }
 
-        // Add header if provided
-        if (block.header) {
-          const thead = document.createElement('thead');
-          const headerRow = document.createElement('tr');
+      // Add header if provided
+      if (block.header) {
+        const thead = document.createElement('thead');
+        const headerRow = document.createElement('tr');
 
-          block.header.forEach(cell => {
-            const th = document.createElement('th');
-            th.innerHTML = cell;
-            headerRow.appendChild(th);
-          });
-
-          thead.appendChild(headerRow);
-          table.appendChild(thead);
-        }
-
-        // Add body
-        const tbody = document.createElement('tbody');
-
-        block.rows.forEach(row => {
-          const tr = document.createElement('tr');
-
-          row.forEach(cell => {
-            const td = document.createElement('td');
-            td.innerHTML = cell;
-            tr.appendChild(td);
-          });
-
-          tbody.appendChild(tr);
+        block.header.forEach(cell => {
+          const th = document.createElement('th');
+          th.innerHTML = cell;
+          headerRow.appendChild(th);
         });
 
-        table.appendChild(tbody);
-        blockElement.appendChild(table);
-        break;
+        thead.appendChild(headerRow);
+        table.appendChild(thead);
+      }
 
-      default:
-        // Unknown block type, render as plain text
-        blockElement.textContent = JSON.stringify(block);
+      // Add body
+      const tbody = document.createElement('tbody');
+
+      block.rows.forEach(row => {
+        const tr = document.createElement('tr');
+
+        row.forEach(cell => {
+          const td = document.createElement('td');
+          td.innerHTML = cell;
+          tr.appendChild(td);
+        });
+
+        tbody.appendChild(tr);
+      });
+
+      table.appendChild(tbody);
+      blockElement.appendChild(table);
+      break;
+    }
+
+    default:
+      // Unknown block type, render as plain text
+      blockElement.textContent = JSON.stringify(block);
     }
 
     return blockElement;

@@ -6,7 +6,7 @@ module.exports = {
         features: {
           'nesting-rules': true,
           'custom-properties': true,
-          'color-mod-function': true
+          // Usuwamy color-mod-function, która nie jest już obsługiwana
         }
       }),
       // Używamy minify tylko w środowisku produkcyjnym
